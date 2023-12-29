@@ -1,3 +1,37 @@
+/* Fonts */
+@font-face {
+  font-family: 'Lazer84';
+  src: url('/fonts/Lazer84.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Albert Sans';
+  src: url('/fonts/AlbertSans-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Albert Sans';
+  src: url('/fonts/AlbertSans-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Albert Sans';
+  src: url('/fonts/AlbertSans-Italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Albert Sans';
+  src: url('/fonts/AlbertSans-Thin.woff2') format('woff2');
+  font-weight: 100; /* Adjust the weight as needed */
+  font-style: normal;
+}
+
 /*
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
@@ -42,16 +76,18 @@ h6 {
   isolation: isolate;
 }
 
+/* End CSS reset */
+
 :root {
   --dark: hsl(0, 0%, 13%);
   --light: hsl(180, 25%, 95%);
   --dark-green: hsl(180, 25%, 25%);
   --teal: hsl(183, 81%, 35%);
-  --orange: hsl(13, 60%, 47%);
+  --orange: #c04f30;
 }
 
 body {
-  font-family: monospace;
+  font-family: 'Albert Sans', sans-serif;
   background: var(--light);
 }
 
@@ -59,12 +95,24 @@ html {
   font-size: 100%;
 }
 
-.container {
-  width: min(80%, 1100px);
-  margin-inline: auto;
+h2 {
+  font-size: 3rem;
+  color: var(--orange);
+  font-family: 'Lazer84', monospace;
+  letter-spacing: 0.3rem;
+  border-bottom: 3px solid;
+  border-image: linear-gradient(to right, var(--orange), transparent);
+  border-image-slice: 1;
+  margin-block-end: 1em;
 }
 
-.container-sm {
-  width: min(80%, 800px);
+h3 {
+  font-size: 1.75rem;
+  color: var(--light);
+  font-style: bold;
+}
+
+.container {
+  width: min(80%, 1100px);
   margin-inline: auto;
 }

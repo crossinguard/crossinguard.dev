@@ -6,31 +6,36 @@ import Contact from "../components/Contact.astro";
 import Hero from "../components/Hero.astro";
 ---
 
-<BaseLayout title = 'under development'>
+<BaseLayout title = 'Welcome'>
 	
 	<div class="hero">
 		<Hero />
 	</div>
 
 	<div class="content">
-		<About />
-	
-		<Projects />
-	
-		<Contact />
+		<section id="about">
+			<About />
+		</section>
+
+		<section id="projects">
+			<Projects />
+		</section>
+
+		<section id="contact">
+			<Contact />
+		</section>
 	</div>
 
 </BaseLayout>
 
 <style>
-	.hero {
-    height: 100vh;
-    background: var(--dark);
-  }
-
 	.content {
-		min-height: 500px;
 		display: grid;
 		gap: 2em;
+	}
+
+	#about,
+	#contact {
+		background: var(--dark);
 	}
 </style>
