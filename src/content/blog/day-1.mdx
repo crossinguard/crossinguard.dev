@@ -1,0 +1,92 @@
+---
+title: 'Day 1: Launch sequence initiated.'
+description: 'Setting up my new blog'
+pubDate: '2024-01-09'
+heroImage: '/assets/100daysofcode/day1/0-hero.png'
+---
+
+## Purpose
+
+My primary background is in education, specifically secondary mathematics instruction and university assessment design. After earning a supplementary degree in data analytics, I started diving deeper into modern web development for presenting information. For the second half of 2023 I focused on learning frontend web development, primarily using resources from [Traversy Media](https://www.traversymedia.com/), [coder-coder](https://coder-coder.com/), and [freecodecamp](https://www.freecodecamp.org/). As we kick off 2024 I am looking for a context to practice my coding skills and create some practical projects.
+
+My original website was created using [Quarto](https://quarto.org/), a tool I became familiar with while creating data reports with R and markdown. To best align with my educational and data-reporting needs, I decided to focus on building static websites using the [Astro](https://astro.build/) framework.
+
+![Original crossinguard.dev website created with Quarto](/assets/100daysofcode/day1/1-original-website.png)
+_[1] Professional profile built in Quarto that was text-heavy and limited in customization_
+
+Additionally, I am starting a blog (the one you are reading!) to document my process, have a visual timeline of my progress, and to serve as a social media alternative to the [#100DaysofCode](https://www.100daysofcode.com/) challenge.
+
+## Day 1: Getting Set Up
+
+### Tools
+
+- [VS Code](https://code.visualstudio.com/)
+- [Astro framework](https://astro.build/)
+- [Iconify icon sets](https://icon-sets.iconify.design/)
+
+### First Steps
+
+I started by creating my project directory `crossinguard.dev`. This directory will be my main work space moving forward. Beyond this blog, the intention is to replace my existing professional profile with this new Astro website to house work samples and my resume.
+
+I then opened up my fresh empty project directory in my terminal and ran `npm create astro@latest` to create my new Astro project. I chose the blog template and will use that to learn the content collection structure since I am pretty weak in my Javascript and Typescript coding knowledge.
+
+![Output from a terminal showing the creation of an Astro project](/assets/100daysofcode/day1/2-launch-sequence-initiated.png)
+_[2] Astro's CLI wizard did all the work for me_
+
+Next I opened the `crossinguard.dev` directory in VS Code and ran `npm run dev` using the VS Code integrated terminal. This allowed me to view the blog template created by Astro's wizard as a fully functional website within my web browser.
+
+I plan to use some svg icons from [Phosphor Icons](https://phosphoricons.com/) but was unable to get the icons to show up using Phosphor's own guide. Instead I used Iconify to access Phosphor by adding `<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>` to my `BaseHead.astro` component located in `src/components`. This allows me to import icons into my blog posts.
+
+For example, if I wished to embed the Phosphor logo <iconify-icon icon="ph:phosphor-logo"></iconify-icon> to use as an icon , I can paste `<iconify-icon icon="ph:phosphor-logo"></iconify-icon>` anywhere in my markdown.
+
+```mdx
+Phosphor logo <iconify-icon icon="ph:phosphor-logo"></iconify-icon>
+```
+
+### Updating the template
+
+Inside of `src/content/blog` there is an existing collection of sample blog posts. I created a new blog post titled `day-1.mdx` (this one!) to be the launch point of my custom content. I do not fully know the difference between `.md` and `.mdx` files but my main understanding is I can use custom components in an `.mdx` file so will choose those by default. As soon as `day-1.mdx` was created, it was immediately visible on my website and could be accessed from the "Blog" navigation.
+
+I used the existing sample blog posts to steal structure and learn what data should be provided to the parameters (e.g., title, description). Additionally I created a blog image template to help me keep up with hero images for each blog post. Each image is exported as a `.png` and saved into `public/assets/`.
+
+Next I changed the base information located in `src/consts.ts`, which at this point was just the name of my site and a short description. Updating the site name changed the text in the upper left of my navigation from "Astro Blog" to "crossinguard.dev".
+
+![Astro's blog template with minor customization](/assets/100daysofcode/day1/3-new-blog-post.png)
+_[3] New blog post, who dis?_
+
+I noticed the page of blog posts start with the oldest post, which is the opposite of what I want. To finish up day 1 I decided to try and correct that order. I opened up `src/pages/blog/index.astro` to view the landing page for the blog posts. I didn't entirely know how to edit this to flip the order so asked ChatGPT. I copy/pasted the entire contents of the blog index file and asked ChatGPT how an expert web developer specializing in the Astro framework would reverse the order of the blog posts to be descending. Turns out I just needed to adjust the `const` at the top of the page.
+
+```astro
+---
+const posts = (await getCollection('blog')).sort(
+	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
+---
+```
+
+_old version using `(a, b)`_
+
+```astro
+---
+const posts = (await getCollection('blog')).sort(
+	(b, a) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
+---
+```
+
+_updated version using `(b, a)`_
+
+And with that I had a blog page showing my own custom content as the top post. Each day when I add a new post it will appear as the first entry.
+
+![Blog page with posts sorted in descending order by date](/assets/100daysofcode/day1/4-blog-order.png)
+_[3] Day 1 on top right where I wanted it_
+
+### Winding Down
+
+With my own posts confirmed functional, I deleted all existing sample blog posts located in `src/content/blog`, leaving only my `day-1.mdx` file.
+
+## TOODS
+
+- Customize CSS to use specific fonts and basic style colors
+- Update social media links in nav and footer
+- Replace "crossinguard.dev" nav text with logo to serve as a home button
