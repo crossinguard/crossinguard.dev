@@ -1,0 +1,11 @@
+:root {
+  --dark: #171717;
+  --gray: #363636;
+  --light: #f2f2f2;
+  --teal: #119da4;
+  --orange: #bf4e30;
+  --accent: var(--orange);
+  --gray-light: lighten(var(--gray), 20%);
+  --gray-dark: darken(var(--gray), 20%);
+  --gray-gradient: red;
+}

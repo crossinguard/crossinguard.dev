@@ -1,0 +1,31 @@
+<div class="social-links">
+  <a href="https://github.com/crossinguard" target="_blank">
+    <span class="sr-only">Go to crossinguard's GitHub profile</span>
+    <iconify-icon icon="ph:github-logo" width="32" height="32"></iconify-icon>
+  </a>
+  <a href="https://www.linkedin.com/in/w-brett-egbert/" target="_blank">
+    <span class="sr-only">Go to crossinguard's LinkedIn profile</span>
+    <iconify-icon icon="ph:linkedin-logo" width="32" height="32"></iconify-icon>
+  </a>
+</div>
+
+<style>
+	.social-links {
+		display: flex;
+		justify-content: center;
+		gap: 1em;
+		margin-top: 1em;
+	}
+	.social-links a {
+		text-decoration: none;
+		color: var(--gray);
+	}
+	.social-links a:hover {
+		color: var(--teal);
+	}
+	@media (max-width: 720px) {
+		.social-links {
+			display: none;
+		}
+	}
+</style>
