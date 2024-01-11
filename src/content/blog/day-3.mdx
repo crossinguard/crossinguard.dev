@@ -1,0 +1,105 @@
+---
+title: 'Day 3: Fresh coat of paint'
+description: '#100DaysOfCode Day 3'
+pubDate: '2024-01-11'
+heroImage: '/assets/100daysofcode/day3/0-hero.png'
+---
+
+## Purpose
+
+To document my [#100DaysofCode](https://www.100daysofcode.com/) challenge for 2024, currently focused on building a professional profile using [Astro](https://astro.build/).
+
+## Task List
+
+- Make color changes throughout all pages to reflect new CSS color options
+- Futher customize header and footer colors and links
+- Change home page to be custom content
+- Customize nav. Astro is warning me that my icon used as a home button is causing accessibility concerns.
+
+### Color Changes
+
+I set up my new CSS colors yesterday and did a scrappy job linking them to existing components. To start cleaning things up I split my css with `src/styles` into `global.css`, `fonts.css`, and `colors.css`. Additionally, I went ahead and added a `reset.css` to incorporate [Josh Comeau's custom css reset](https://www.joshwcomeau.com/css/custom-css-reset/#our-finished-product-10). Each `.css` sheet is imported into my `BaseHead.astro` component so should apply to all pages/components globally. Any specific styling will happen directly within the file for that page/component.
+
+There are likely conflicts between the reset, colors, and existing stylings provided by the blog template so I will work to resolve those across the coming days as I make this template my own.
+
+Eventually I want multiple color themes (light, dark) so users can view my page with their own preferences, but for now I am focusing on a dark theme. To kick today off I
+went through `global.css` and removed any color use beyond having a dark background and a light text color. Additionally, I went ahead and created lighter versions of my accent colors that would have better contrast with a dark background. I used [WebAIM's constrast checker](https://webaim.org/resources/contrastchecker/) to ensure my lighter accent colors had a contrast ratio of at least 7:1 for normal text and 4.5:1 for large text against my dark color.
+
+```css
+:root {
+  --dark: #171717;
+  --light: #f2f2f2;
+  --gray: #363636;
+  --gray-light: #a3a3a3;
+  --teal: #119da4;
+  --teal-light: #15c2cb;
+  --orange: #bf4e30;
+  --orange-light: #de927c;
+}
+```
+
+<div style="display: flex; flex-wrap: wrap; justify-content: center;">
+  <div style="height: 100px; width: 150px; text-align: center; background-color: var(--orange);">
+    `orange`
+  </div>
+
+{' '}
+
+<div style="height: 100px; width: 150px; text-align: center; background-color: var(--orange-light);">
+  `orange-light`
+</div>
+
+{' '}
+
+<div style="height: 100px; width: 150px; text-align: center; background-color: var(--gray);">
+  `gray`
+</div>
+
+{' '}
+
+<div style="height: 100px; width: 150px; text-align: center; background-color: var(--gray-light);">
+  `gray-light`
+</div>
+
+{' '}
+
+<div style="height: 100px; width: 150px; text-align: center; background-color: var(--teal);">
+  `teal`
+</div>
+
+  <div style="height: 100px; width: 150px; text-align: center; background-color: var(--teal-light);">
+    `teal-light`
+  </div>
+</div>
+
+After changing any existing color properties used in `global.css` to my new light, dark, and adjusted accent colors I started digging into the existing components, ensuring only my defined colors were used. This included adjustments to the following components that had existing styles based on the original template:
+
+- `src/pages/blog/index.astro`
+- `src/layouts/BlogPost.astro`
+- `src/components/Social.astro`
+- `src/components/Header.astro`
+- `src/components/Footer.astro`
+
+### Home Page
+
+The home page will eventually house my professional profile and serve as a landing page for potential employers/clients. For now I am removing the template content and replacing with my crossinguard.dev branding and a few hero-like elements to identify this space as my own. I decided to place these pieces into `src/components/Hero.astro` in case I reused this later on.
+
+![Template home page with placeholder text](/assets/100daysofcode/day3/1-home-before.png)
+_[1] Hello, Original Template_
+
+![New home page with crossinguard branding](/assets/100daysofcode/day3/2-home-after.png)
+_[2] The hero crossinguard emerges_
+
+In order to minimize media queries on the text elements of the hero, I made use of the [Clamp Calculator](https://royalfig.github.io/fluid-typography-calculator/), a fluid typography calculator.
+
+### Navigation
+
+I am generally in for the way the navigation looks (having removed the social tags from the header) but want it more confined to the middle since it looks a bit rediculous on wide screens.
+
+Additionally, Astro was warning me that my logo home link needed text in order to be accessible. This is a redundant button with the "Home" button present in the navigation so I added text for a screen reader that is not displayed visually by adding a span: `<span class="sr-only">Home</span>`.
+
+## TOODS
+
+- Create a component to deal with images and figcaption for use in my blog posts
+- Customize About page
+- Investigate inconsistent jitter when hovering over hero titles

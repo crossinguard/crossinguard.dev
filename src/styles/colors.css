@@ -1,11 +1,13 @@
 :root {
   --dark: #171717;
-  --gray: #363636;
   --light: #f2f2f2;
+  --gray: #363636;
+  --gray-light: #a3a3a3;
+  --gray-transparent: hsla(0, 0%, 64%, 0.2);
   --teal: #119da4;
+  --teal-light: #15c2cb;
   --orange: #bf4e30;
-  --accent: var(--orange);
-  --gray-light: lighten(var(--gray), 20%);
-  --gray-dark: darken(var(--gray), 20%);
-  --gray-gradient: red;
+  --orange-light: #de927c;
+  --accent: var(--orange-light);
+  --accent-alt: var(--teal-light);
 }

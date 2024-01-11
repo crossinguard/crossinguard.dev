@@ -1,35 +1,28 @@
 ---
 import HeaderLink from './HeaderLink.astro';
-import Social from './Social.astro';
-import { SITE_TITLE } from '../consts';
+// import { SITE_TITLE } from '../consts';
 ---
 
 <header>
 	<nav>
-		<h2><a href="/"><img src="/assets/cg-logo.svg" alt="Home" height="50" width="50"></a></h2>
+		<a href="/">
+			<span class="sr-only">Home</span>
+			<img src="/assets/cg-logo.svg" alt="crossinguard logo" height="50" width="50">
+		</a>
 		<!-- <h2><a href="/">{SITE_TITLE}</a></h2> -->
 		<div class="internal-links">
 			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/blog">Blog</HeaderLink>
 			<HeaderLink href="/about">About</HeaderLink>
 		</div>
-		<Social />
 	</nav>
 </header>
 <style>
 	header {
 		margin: 0;
 		padding: 0 1em;
-		background: var(--light);
-	}
-	h2 {
-		margin: 0;
-		font-size: 1em;
-	}
-
-	h2 a,
-	h2 a.active {
-		text-decoration: none;
+		max-width: 900px;
+		margin-inline: auto;
 	}
 	nav {
 		display: flex;
@@ -38,15 +31,19 @@ import { SITE_TITLE } from '../consts';
 	}
 	nav a {
 		padding: 1em 0.5em;
-		color: var(--dark);
+		color: var(--light);
 		border-bottom: 4px solid transparent;
 		text-decoration: none;
 	}
 	nav a:hover {
-		color: var(--teal);
+		color: var(--accent-alt);
 	}
 	nav a.active {
 		text-decoration: none;
 		border-bottom-color: var(--accent);
 	}
+	@media screen and (max-width: 520px) {
+    img {
+      display: none;
+    }
 </style>
