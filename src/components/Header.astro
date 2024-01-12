@@ -7,7 +7,7 @@ import HeaderLink from './HeaderLink.astro';
 	<nav>
 		<a href="/">
 			<span class="sr-only">Home</span>
-			<img src="/assets/cg-logo.svg" alt="crossinguard logo" height="50" width="50">
+			<img src="/assets/cg-logo.svg" alt="crossinguard logo" height="50" width="50" class="logo">
 		</a>
 		<!-- <h2><a href="/">{SITE_TITLE}</a></h2> -->
 		<div class="internal-links">
@@ -42,8 +42,15 @@ import HeaderLink from './HeaderLink.astro';
 		text-decoration: none;
 		border-bottom-color: var(--accent);
 	}
+	.logo {
+		transition: opacity 0.2s ease-in-out;
+	}
+	.logo:hover {
+		opacity: 0.8;
+	}
 	@media screen and (max-width: 520px) {
     img {
       display: none;
     }
+	}
 </style>

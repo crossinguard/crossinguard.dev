@@ -1,15 +1,15 @@
 <div class="hero container">
-  <div class="logo">
-    <img src="/assets/cg-logo-full.svg" alt="crossinguard.dev" height="350" width="350">
-  </div>
   <div class="text">
-    <h2><span class="regular">William</span> Brett Egbert</h2>
+    <h2><span class="regular william">William</span> <span class="brett">Brett</span> <span class="egbert">Egbert</span></h2>
     <ul>
       <li><span class="left">&lt;</span>mathematics educator<span class="right"> &#47;&#62;</span></li>
       <li><span class="left">&lt;</span>data analyst<span class="right"> &#47;&#62;</span></li>
       <li><span class="left">&lt;</span>assessment specialist<span class="right"> &#47;&#62;</span></li>
       <li><span class="left">&lt;</span>aspiring frontend developer<span class="right"> &#47;&#62;</span></li>
     </ul>
+  </div>
+  <div class="logo">
+    <img src="/assets/cg-logo-full.svg" alt="crossinguard.dev" height="350" width="350">
   </div>
 </div>
 
@@ -42,23 +42,22 @@
     list-style: none;
     font-weight: 100;
     color: var(--gray-light);
-    transition: all 2s ease-in-out;
+    transition: color 1s ease-in-out;
   }
 
+  
+  li:hover {
+    color: var(--accent);
+  }
+  
   .left,
   .right {
     color: transparent;
+    transition: color 0.2s ease-in;
   }
-  
-  li:hover {
-    transition: all 0.3s ease-in-out;
-    color: var(--accent);
-    transform: skew(-5deg);
-  }
-  
+
   li:hover .left,
   li:hover .right {
-    transition: all 0.2s ease-in-out;
     color: var(--accent-alt);
   }
 
@@ -74,4 +73,24 @@
     font-size: 2.25rem;
     font-size: clamp(2.25rem, 2.0423913043478263rem + 0.8857971014492747vw, 2.441rem);
   }
+  
+  .william,
+  .egbert {
+    transition: color 0.4s ease-in-out;
+  }
+  
+  .brett {
+    text-decoration: wavy overline transparent;
+    transition: text-decoration 0.3s ease-in-out;
+  }
+
+  h2:hover .william,
+  h2:hover .egbert {
+    color: var(--gray-light);
+  }
+  
+  h2:hover .brett,
+  .logo:hover .brett {
+      text-decoration: wavy overline var(--accent-alt);
+    }
 </style>

@@ -1,8 +1,37 @@
 ---
+interface Props {
+    src: string;
+    alt: string;
+    caption: string;
+}
 
+const { src, alt, caption } = Astro.props;
 ---
 <figure>
-    <img src="/assets/images/albuquerque.jpg"
-         alt="Albuquerque, New Mexico">
-    <figcaption>A single track trail outside of Albuquerque, New Mexico.</figcaption>
+    <img src={src} alt={alt} />
+    <figcaption>{caption}</figcaption>
 </figure>
+
+<style>
+    figure {
+        display: grid;
+        place-content: center;
+        padding: .5em;
+        /* max-width: 720px; */
+        /* margin-inline: auto; */
+    }
+    
+    img {
+        filter: drop-shadow(0 0 0.25rem var(--gray-transparent));
+    }
+
+    figcaption {
+        border-radius: 0.5rem;
+        margin-block-start: 1em;
+        background-color: var(--gray);
+        color: var(--light);
+        font: smaller monospace;
+        padding: 3px;
+        text-align: center;
+    }
+</style>
