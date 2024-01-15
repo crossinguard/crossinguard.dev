@@ -76,21 +76,19 @@
   
   .william,
   .egbert {
-    transition: color 0.4s ease-in-out;
+    transition: opacity 0.4s ease-in-out;
   }
   
   .brett {
-    text-decoration: wavy overline transparent;
-    transition: text-decoration 0.3s ease-in-out;
+    transition: color 0.4s ease-in-out;
   }
 
-  h2:hover .william,
-  h2:hover .egbert {
-    color: var(--gray-light);
+  .text:hover .william,
+  .text:hover .egbert {
+    opacity: 0.3;
   }
   
-  h2:hover .brett,
-  .logo:hover .brett {
-      text-decoration: wavy overline var(--accent-alt);
+  .text:hover .brett {
+      color: var(--accent-alt);
     }
 </style>

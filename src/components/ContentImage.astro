@@ -8,7 +8,7 @@ interface Props {
 const { src, alt, caption } = Astro.props;
 ---
 <figure>
-    <img src={src} alt={alt} />
+    <img src={src} alt={alt} loading="lazy" decoding="async"/>
     <figcaption>{caption}</figcaption>
 </figure>
 
@@ -16,22 +16,20 @@ const { src, alt, caption } = Astro.props;
     figure {
         display: grid;
         place-content: center;
-        padding: .5em;
-        /* max-width: 720px; */
-        /* margin-inline: auto; */
+        padding: 1em;
+        border: 1px solid var(--gray);
+        border-radius: 0.5em;
+        margin-block: 1em;
     }
     
     img {
-        filter: drop-shadow(0 0 0.25rem var(--gray-transparent));
+        border-radius: 0.5em;
     }
 
     figcaption {
-        border-radius: 0.5rem;
-        margin-block-start: 1em;
-        background-color: var(--gray);
-        color: var(--light);
-        font: smaller monospace;
-        padding: 3px;
-        text-align: center;
+        margin-top: 0.5em;
+        font-style: italic;
+        color: var(--gray-light);
+        border-top: solid var(--gray-transparent);
     }
 </style>
