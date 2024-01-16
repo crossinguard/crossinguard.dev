@@ -1,0 +1,50 @@
+---
+title: 'Day 6: Professional it up'
+description: '#100DaysOfCode Day 6'
+pubDate: '2024-01-16'
+heroImage: '/assets/100daysofcode/day6/0-hero.png'
+---
+
+import ContentImage from '../../components/ContentImage.astro';
+
+## Purpose
+
+To document my [#100DaysofCode](https://www.100daysofcode.com/) challenge for 2024, currently focused on building a professional profile using [Astro](https://astro.build/).
+
+## Task List
+
+- swap top-left "home" button logo with crossinguard.dev text
+- add resume
+- update README
+
+### Home button
+
+Since I included the font Lazer84 in my assets and already created the font family in CSS, I went ahead and did a text-based home button. That means I just turned the original #H2 header using `SITE_DESCRIPTION` from my `consts.ts` file back on and the logo back off.
+
+```astro
+---
+import { SITE_TITLE } from '../consts';
+---
+
+<header>
+  <nav>
+    <!-- <a href="/">
+      <span class="sr-only">Home</span>
+      <img src="/assets/cg-logo.svg" alt="crossinguard logo" height="50" width="50" class="logo">
+    </a> -->
+    <h2><a href="/">{SITE_TITLE}</a></h2>
+```
+
+I added a glowing hover effect to the logo that we will sit on for a bit and see if we like it.
+
+### Resume
+
+My resume already lives in markdown so adding here should be (knocks on wood) easy.
+
+### README
+
+Replaced the existing template README with a quick description of this website.
+
+## TOODS
+
+- Create new layouts so I can split `.astro` main page layouts from blog post layouts.

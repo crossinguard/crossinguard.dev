@@ -1,15 +1,15 @@
 ---
 import HeaderLink from './HeaderLink.astro';
-// import { SITE_TITLE } from '../consts';
+import { SITE_TITLE } from '../consts';
 ---
 
 <header>
 	<nav>
-		<a href="/">
+		<!-- <a href="/">
 			<span class="sr-only">Home</span>
 			<img src="/assets/cg-logo.svg" alt="crossinguard logo" height="50" width="50" class="logo">
-		</a>
-		<!-- <h2><a href="/">{SITE_TITLE}</a></h2> -->
+		</a> -->
+		<h2 class="logo"><a href="/">{SITE_TITLE}</a></h2>
 		<div class="internal-links">
 			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/blog">Blog</HeaderLink>
@@ -34,6 +34,7 @@ import HeaderLink from './HeaderLink.astro';
 		color: var(--light);
 		border-bottom: 4px solid transparent;
 		text-decoration: none;
+		transition: color 0.2s ease-in-out;
 	}
 	nav a:hover {
 		color: var(--accent-alt);
@@ -43,14 +44,20 @@ import HeaderLink from './HeaderLink.astro';
 		border-bottom-color: var(--accent);
 	}
 	.logo {
-		transition: opacity 0.2s ease-in-out;
+		font-family: 'lazer84', monospace;
+		font-size: 1.5rem;
+		filter: drop-shadow(0 0 0.1rem var(--accent-alt));
+		transition: filter 2s ease-in-out;
 	}
 	.logo:hover {
-		opacity: 0.8;
+		filter: drop-shadow(0 0 0.5rem var(--accent-alt));
 	}
 	@media screen and (max-width: 520px) {
-    img {
-      display: none;
-    }
+		.logo {
+			display: none;
+		}
+		nav {
+			justify-content: end;
+		}
 	}
 </style>
