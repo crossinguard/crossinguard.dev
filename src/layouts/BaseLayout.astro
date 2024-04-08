@@ -1,0 +1,52 @@
+---
+import Footer from "../components/Footer.astro";
+import Nav from "../components/Nav.astro";
+
+import '../styles/reset.css';
+import '../styles/fonts.css';
+import '../styles/colors.css';
+import '../styles/global.css';
+
+import { SITE_TITLE } from '../consts';
+
+interface Props {
+  title?: string | undefined;
+  description?: string | undefined;
+}
+
+const { title, description } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" property="og:description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#586959">
+    <meta name="msapplication-TileColor" content="#586959">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- IconifyIcon web component for svg icons -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+    <!-- Phosphor Icons -->
+    <!-- <script src="https://unpkg.com/@phosphor-icons/web"></script> -->
+
+    <title>{title} | {SITE_TITLE}</title>
+  </head>
+
+  <body>
+      <Nav />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

@@ -1,0 +1,86 @@
+---
+const textLinks: { label: string; href: string }[] = [
+	{ label: 'Home', href: '/' },
+    { label: 'About', href: '/#about' },
+	{ label: 'Contact', href: '/#contact' },
+	{ label: 'Blog', href: '/blog' },
+];
+---
+
+<nav class="navbar">
+  <ul class="nav-links">
+    {
+      textLinks.map(({ label, href }) => (
+        <li class="nav-item">
+          <a
+          aria-current={Astro.url.pathname === href}
+          class:list={[
+            'link',
+            {
+              active:
+              Astro.url.pathname === href ||
+              (href !== '/' && Astro.url.pathname.startsWith(href)),
+            },
+          ]}
+          href={href}
+          >
+          {label}
+          </a>
+          </li>
+          ))
+        }
+  </ul>
+</nav>
+
+<style>
+  .navbar {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 1em;
+    width: 90%;
+    max-width: 1100px;
+    margin-inline: auto;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1em;
+}
+
+.link {
+    color: var(--light);
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-size: clamp(
+        1.25rem,
+        1.0294117647058822rem + 0.9411764705882352vw,
+        1.5rem
+    );
+    border-bottom: 4px solid transparent;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+  }
+
+  .link:hover {
+    color: var(--accent);
+    border-bottom: 4px solid var(--accent);
+  }
+
+  .active {
+    font-weight: bold;
+    border-bottom: 4px solid var(--accent-alt);
+  }
+
+  .active:hover {
+    border-color: var(--accent-alt);
+  }
+
+  
+</style>
+
+
+
+

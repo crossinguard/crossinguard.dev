@@ -1,128 +1,95 @@
-/*
-  The CSS in this style tag is based off of Bear Blog's default CSS.
-  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
-  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
- */
 body {
-  font-family: 'Atkinson', sans-serif;
-  margin: 0;
-  padding: 0;
-  text-align: left;
-  background: var(--dark);
+  /* outline: solid pink; */
+  font-family: var(--font-family-sans);
   color: var(--light);
-  background-size: 100% 600px;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  font-size: 20px;
-  line-height: 1.7;
+  background-color: var(--dark);
+  line-height: 1.5;
+  font-size: 150%;
 }
-main {
-  /* width: 720px; */
-  max-width: calc(100% - 2em);
-  margin: auto;
-  padding: 3em 1em;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0 0 0.5rem 0;
-  line-height: 1.2;
-}
+
+/* body.darkmode {
+  color: var(--light);
+  background-color: var(--dark);
+} */
+
 h1 {
-  font-size: 3.052em;
+  font-family: var(--font-family-fancy);
+  font-size: 2.5rem;
+  font-size: clamp(2.5rem, 2.0588235294117645rem + 1.8823529411764703vw, 3rem);
 }
+
 h2 {
-  font-size: 2.441em;
+  font-size: 2rem;
+  font-size: clamp(2rem, 1.5588235294117647rem + 1.8823529411764703vw, 2.5rem);
 }
+
 h3 {
-  font-size: 1.953em;
+  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 1.0588235294117647rem + 1.8823529411764703vw, 2rem);
 }
+
 h4 {
-  font-size: 1.563em;
+  font-size: 1.25rem;
+  font-size: clamp(
+    1.25rem,
+    1.0294117647058822rem + 0.9411764705882352vw,
+    1.5rem
+  );
 }
+
 h5 {
-  font-size: 1.25em;
+  font-size: 1.1rem;
+  font-size: clamp(
+    1.1rem,
+    0.9676470588235295rem + 0.5647058823529407vw,
+    1.25rem
+  );
 }
-strong,
-b {
-  font-weight: 700;
-}
+
 a {
   color: var(--accent);
   transition: all 0.2s ease-in-out;
+  text-underline-offset: 0.25em;
 }
+
 a:hover {
   color: var(--accent-alt);
+  filter: brightness(0.9);
 }
-p {
-  margin-bottom: 1em;
+
+.fancy {
+  font-family: var(--font-family-fancy);
+  letter-spacing: 0.25rem;
 }
-.prose p {
-  margin-bottom: 2em;
+
+.mono {
+  font-family: var(--font-family-mono);
 }
-textarea {
-  width: 100%;
-  font-size: 16px;
-}
-input {
-  font-size: 16px;
-}
-table {
-  width: 100%;
-}
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-code {
-  padding: 2px 5px;
-  background-color: var(--gray-transparent);
-  border-radius: 5px;
-}
-pre {
-  padding: 1.5em;
-  border-radius: 8px;
-}
-pre > code {
-  all: unset;
-}
-blockquote {
-  border-left: 4px solid var(--accent);
-  padding: 0 0 0 20px;
-  margin: 0px;
-  font-size: 1.333em;
-}
-hr {
-  border: none;
-  border-top: 1px solid var(--accent-alt);
-}
-@media (max-width: 720px) {
-  body {
-    font-size: 18px;
-  }
-  main {
-    padding: 1em;
+
+.content {
+  /* outline: solid yellow; */
+  width: 90%;
+  max-width: 800px;
+  margin-inline: auto;
+
+  p {
+    padding-block: 0.5em;
   }
 }
 
-.sr-only {
-  border: 0;
-  padding: 0;
-  margin: 0;
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  /* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
-  clip: rect(1px 1px 1px 1px);
-  /* maybe deprecated but we need to support legacy browsers */
-  clip: rect(1px, 1px, 1px, 1px);
-  /* modern browsers, clip-path works inwards from each corner */
+iconify-icon {
+  position: relative;
+  /* Adjust these values accordingly */
+  top: 0.5rem;
+  /* left: 5px; */
+}
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
   clip-path: inset(50%);
-  /* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
   white-space: nowrap;
+  width: 1px;
 }

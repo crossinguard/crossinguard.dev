@@ -20,3 +20,17 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: 'VictorMono';
+  src: url('/fonts/VictorMono-Regular.woff2') format('woff2'),
+    url('/fonts/VictorMono-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-family-sans: 'Atkinson', sans-serif;
+  --font-family-fancy: 'lazer84', serif;
+  --font-family-mono: 'VictorMono', monospace;
+}
