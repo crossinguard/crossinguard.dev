@@ -1,16 +1,9 @@
 body {
-  /* outline: solid pink; */
   font-family: var(--font-family-sans);
   color: var(--light);
   background-color: var(--dark);
-  line-height: 1.5;
   font-size: 150%;
 }
-
-/* body.darkmode {
-  color: var(--light);
-  background-color: var(--dark);
-} */
 
 h1 {
   font-family: var(--font-family-fancy);
@@ -72,16 +65,14 @@ a:hover {
   max-width: 800px;
   margin-inline: auto;
 
-  p {
-    padding-block: 0.5em;
+  & p {
+    padding-block: 1em;
   }
 }
 
 iconify-icon {
   position: relative;
-  /* Adjust these values accordingly */
   top: 0.5rem;
-  /* left: 5px; */
 }
 
 .sr-only:not(:focus):not(:active) {
