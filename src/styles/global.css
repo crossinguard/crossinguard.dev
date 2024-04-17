@@ -52,7 +52,7 @@ a:hover {
 
 .fancy {
   font-family: var(--font-family-fancy);
-  letter-spacing: 0.25rem;
+  /* letter-spacing: 0.25rem; */
 }
 
 .mono {

@@ -1,43 +1,46 @@
 ---
-const textLinks: { label: string; href: string }[] = [
-	{ label: 'Home', href: '/' },
-  // { label: 'About', href: '/#about' },
-	// { label: 'Contact', href: '/#contact' },
-	{ label: 'Blog', href: '/blog' },
+const textLinks: { label: string; url: string }[] = [
+	{ label: 'Home', url: '/' },
+  { label: 'Articles', url: '/articles' },
+  { label: 'Resume', url: '/resume' },
 ];
 ---
-
-<nav class="navbar">
-  <ul class="nav-links">
-    {
-      textLinks.map(({ label, href }) => (
-        <li class="nav-item">
-          <a
-          aria-current={Astro.url.pathname === href}
-          class:list={[
-            'link',
-            {
-              active:
-              Astro.url.pathname === href ||
-              (href !== '/' && Astro.url.pathname.startsWith(href)),
-            },
-          ]}
-          href={href}
-          >
-          {label}
-          </a>
-          </li>
-          ))
-        }
-  </ul>
-</nav>
+<header>
+  <nav class="navbar">
+    <div class="brand"><a href="/" class="fancy cg">crossinguard.dev</a></div>
+    <ul class="nav-links">
+      {
+        textLinks.map(({ label, url }) => (
+          <li class="nav-item">
+            <a
+            aria-current={Astro.url.pathname === url}
+            class:list={[
+              'link',
+              {
+                active:
+                Astro.url.pathname === url ||
+                (url !== '/' && Astro.url.pathname.startsWith(url)),
+              },
+            ]}
+            href={url}
+            >
+            {label}
+            </a>
+            </li>
+            ))
+          }
+    </ul>
+  </nav>
+</header>
 
 <style>
   .navbar {
     display: flex;
-    justify-content: end;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
     padding: 1em;
+    gap: 0.5em;
     width: 90%;
     max-width: 1100px;
     margin-inline: auto;
@@ -47,6 +50,7 @@ const textLinks: { label: string; href: string }[] = [
     display: flex;
     list-style: none;
     gap: 1em;
+    padding: 0;
 }
 
 .link {
@@ -66,11 +70,11 @@ const textLinks: { label: string; href: string }[] = [
 
   .link:hover {
     color: var(--accent);
-    border-bottom: 4px solid var(--accent);
+    border-bottom: 4px solid var(--gray);
   }
 
   .active {
-    font-weight: bold;
+    color: var(--accent-alt);
     border-bottom: 4px solid var(--accent-alt);
   }
 
@@ -78,7 +82,22 @@ const textLinks: { label: string; href: string }[] = [
     border-color: var(--accent-alt);
   }
 
-  
+  .cg {
+    color: var(--accent-alt);
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-size: clamp(
+        1.25rem,
+        1.0294117647058822rem + 0.9411764705882352vw,
+        1.5rem
+    );
+  }
+
+  @media (max-width: 650px) {
+    .navbar {
+      justify-content: center;
+    }
+  }
 </style>
 
 
