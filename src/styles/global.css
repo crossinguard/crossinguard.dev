@@ -2,7 +2,7 @@ body {
   font-family: var(--font-family-sans);
   color: var(--light);
   background-color: var(--dark);
-  font-size: 150%;
+  /* font-size: 150%; */
 }
 
 h1 {
@@ -40,14 +40,13 @@ h5 {
 }
 
 a {
-  color: var(--accent);
+  color: var(--accent-alt);
   transition: all 0.2s ease-in-out;
   text-underline-offset: 0.25em;
 }
 
 a:hover {
-  color: var(--accent-alt);
-  filter: brightness(0.9);
+  color: var(--accent);
 }
 
 .fancy {

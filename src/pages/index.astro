@@ -1,10 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+const title = "Home"
 ---
 
-<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+<BaseLayout title={title}>
 	<Hero />
 
 	<section class="content" id="about">

@@ -1,12 +1,31 @@
+---
+const iconLinks: { label: string; href: string; icon: string }[] = [
+	{ 
+		label: 'Email', 
+		href: 'mailto:brett@crossinguard.dev', 
+		icon: 'envelope' 
+	},
+	{ 
+		label: 'GitHub', 
+		href: 'https://github.com/crossinguard', 
+		icon: 'github-logo' 
+	},
+	{ 
+		label: 'LinkedIn', 
+		href: 'https://www.linkedin.com/in/w-brett-egbert/', 
+		icon: 'linkedin-logo' 
+	},
+];
+---
 <div class="social-links">
-  <a href="https://github.com/crossinguard" target="_blank">
-    <span class="sr-only">Go to the GitHub profile for Brett Egbert (crossinguard)</span>
-    <iconify-icon icon="ph:github-logo" width="32" height="32"></iconify-icon>
-  </a>
-  <a href="https://www.linkedin.com/in/w-brett-egbert/" target="_blank">
-    <span class="sr-only">Go to the LinkedIn profile for Brett Egbert (crossinguard)</span>
-    <iconify-icon icon="ph:linkedin-logo" width="32" height="32"></iconify-icon>
-  </a>
+	{
+		iconLinks.map(({ href, icon, label }) => (
+			<a href={href} class="social" target="_blank">
+				<span class="sr-only">Go to {label} for Friends of the Sumas Library</span>
+				<iconify-icon icon={`ph-${icon}`} width="32" height="32"></iconify-icon>
+			</a>
+		))
+	}
 </div>
 
 <style>
@@ -18,10 +37,6 @@
 	}
 	.social-links a {
 		text-decoration: none;
-		color: var(--gray-light);
 		transition: all 0.2s ease-in-out;
-	}
-	.social-links a:hover {
-		color: var(--accent-alt);
 	}
 </style>

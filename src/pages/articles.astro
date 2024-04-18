@@ -1,13 +1,16 @@
 ---
 import { getCollection } from 'astro:content';
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import FormattedDate from '../../components/FormattedDate.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import FormattedDate from '../components/FormattedDate.astro';
 
 const posts = (await getCollection('articles')).sort(
 	(b, a) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
 );
+
+const title = "Articles"
 ---
-<BaseLayout>
+<BaseLayout title = {title}>
+	<blockquote class="coming-soon">under development!</blockquote>
 	<section>
 		<ul>
 			{
@@ -27,6 +30,13 @@ const posts = (await getCollection('articles')).sort(
 </BaseLayout>
 
 <style>
+	.coming-soon {
+		text-align: center;
+		font-size: 4rem;
+		padding-block: 1em;
+		margin-block: 1em;
+		border-block: solid var(--accent);
+	}
 	main {
 		width: 960px;
 	}
