@@ -1,11 +1,11 @@
 <div class="hero container">
   <div class="text">
-    <h2><span class="regular william">William</span> <span class="brett">Brett</span> <span class="egbert">Egbert</span></h2>
+    <h2><span class="william">William</span> <span class="brett">Brett</span> <span class="egbert">Egbert</span></h2>
     <ul>
-      <li><span class="left">&lt;</span>mathematics educator<span class="right"> &#47;&#62;</span></li>
-      <!-- <li><span class="left">&lt;</span>data analyst<span class="right"> &#47;&#62;</span></li> -->
-      <li><span class="left">&lt;</span>assessment specialist<span class="right"> &#47;&#62;</span></li>
-      <li><span class="left">&lt;</span>frontend developer<span class="right"> &#47;&#62;</span></li>
+      <li><a href="/resume/mathematics-educator" class="xp-link">mathematics educator</a></li>
+      <!-- <li>data analyst</li> -->
+      <li><a href="/resume/assessment-specialist" class="xp-link">assessment specialist</a></li>
+      <li><a href="/resume/web-developer" class="xp-link">web developer</a></li>
     </ul>
   </div>
   <div class="logo">
@@ -19,7 +19,7 @@
     justify-content: center;
     align-items: center;
     gap: 2em;
-    padding-block: 5em;
+    padding-block: 3em;
     min-height: 600px;
   }
   @media (max-width: 900px) {
@@ -28,68 +28,77 @@
     }
   }
 
-  .text {
+  /* TEXT FEATURE */
+  h2 {
+    font-size: 2rem;
+    font-size: clamp(2rem, 2vw + 1rem, 2.5rem);
+  }
+  
+  :is(.william, .brett, .egbert) {
+    transition: color 0.4s ease-in-out;
+  }
+
+  .william {
+    font-weight: normal;
+  }
+  
+  .brett {
+    color: var(--accent);
+  }
+
+  .text:hover .william,
+  .text:hover .egbert {
+    color: var(--gray);
+  }
+  
+  .text:hover .brett {
+    color: var(--accent-alt);
   }
   
   ul {
     display: flex;
     flex-direction: column;
     padding: 0;
+    color: var(--gray);
   }
   
   li {
-    font-size: 1.5rem;
-    font-size: clamp(1.5rem, 0.9565217391304348rem + 2.318840579710145vw, 2rem);
+    font-size: 1.25rem;
+    font-size: clamp(1.25rem, 1vw + 1rem, 2rem);
     list-style: none;
-    font-weight: 100;
     color: var(--gray-light);
-    transition: color 1s ease-in-out;
+    transition: color 0.2s ease-in-out;
   }
 
-  
-  li:hover {
-    color: var(--accent);
+  .xp-link {
+    color: var(--gray-light);
+    text-decoration: none;
   }
   
-  .left,
-  .right {
+  li:hover {
+    color: var(--light);
+  }
+  
+  li::before {
+    content: "< ";
     color: transparent;
     transition: color 0.2s ease-in;
   }
 
-  li:hover .left,
-  li:hover .right {
-    color: var(--accent-alt);
+  li::after {
+    content: " />";
+    color: transparent;
+    transition: color 0.2s ease-in;
   }
 
-  .regular {
-    font-weight: normal;
+  li:hover::before,
+  li:hover::after {
+    color: var(--accent);
   }
 
+  /* LOGO FEATURE */
   .logo {
     width: auto;
+    filter: drop-shadow(3px 5px 2px rgb(33 37 41 / 0.4));
   }
-
-  h2 {
-    font-size: 2.25rem;
-    font-size: clamp(2.25rem, 2.0423913043478263rem + 0.8857971014492747vw, 2.441rem);
-  }
-  
-  .william,
-  .egbert {
-    transition: opacity 0.4s ease-in-out;
-  }
-  
-  .brett {
-    transition: color 0.4s ease-in-out;
-  }
-
-  .text:hover .william,
-  .text:hover .egbert {
-    opacity: 0.3;
-  }
-  
-  .text:hover .brett {
-      color: var(--accent-alt);
-    }
 </style>
