@@ -5,13 +5,24 @@ const today = new Date();
 ---
 
 <footer>
-	W. Brett Egbert &copy; {today.getFullYear()}
-	<Social />
+	<div class="flex">
+		<p>W. Brett Egbert &copy; {today.getFullYear()}</p>
+		<Social />
+		<p>stay curious</p>
+	</div>
 </footer>
 <style>
-	footer {
-		padding: 2em 1em 6em 1em;
+	.flex {
+		font-family: var(--font-family-mono);
+		display: flex;
+		flex-direction: column;
+		padding-block: 4em;
 		color: var(--gray-light);
 		text-align: center;
+	}
+
+	p:last-child {
+		font-style: italic;
+		font-size: smaller;
 	}
 </style>

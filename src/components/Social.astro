@@ -21,7 +21,9 @@ const iconLinks: { label: string; href: string; icon: string }[] = [
 	{
 		iconLinks.map(({ href, icon, label }) => (
 			<a href={href} class="social" target="_blank">
-				<span class="sr-only">Go to {label} for Friends of the Sumas Library</span>
+				<span class="sr-only">
+					Go to {label} for Friends of the Sumas Library
+				</span>
 				<iconify-icon icon={`ph-${icon}`} width="32" height="32"></iconify-icon>
 			</a>
 		))
@@ -32,11 +34,17 @@ const iconLinks: { label: string; href: string; icon: string }[] = [
 	.social-links {
 		display: flex;
 		justify-content: center;
+		height: 2.5rem;
 		gap: 1em;
-		margin-top: 1em;
+		margin-block: 1em;
 	}
 	.social-links a {
 		text-decoration: none;
 		transition: all 0.2s ease-in-out;
 	}
+
+	iconify-icon {
+        position: relative;
+		top: 0.25rem;
+    }
 </style>
