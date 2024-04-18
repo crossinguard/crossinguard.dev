@@ -1,15 +1,15 @@
 ---
-
+const { message = 'pardon the dust' } = Astro.props;
 ---
 <div class="coming-soon mono">
     <p>UNDER CONSTRUCTION</p>
-    <p>pardon the dust</p>
+    <p>{message}</p>
 </div>
 
 <style>
     .coming-soon {
         text-align: center;
-        padding-block: 1em;
+        padding: 1em;
         margin-block: 1em;
         border: dotted var(--accent);
         background: var(--gray-9);

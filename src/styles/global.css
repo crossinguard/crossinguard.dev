@@ -78,6 +78,14 @@ a:hover {
   filter: drop-shadow(0.1rem 0.2rem 0.1rem rgb(33 37 41 / 0.4));
 }
 
+.skew {
+  transform: skew(-20deg);
+}
+
+.skew > * {
+  transform: skew(20deg);
+}
+
 iconify-icon {
   position: relative;
   top: 0.5rem;

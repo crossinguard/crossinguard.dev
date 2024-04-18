@@ -6,7 +6,7 @@ const {frontmatter} = Astro.props;
 ---
 <BaseLayout title={frontmatter.title}>
     <div class="content">
-        <div class="header shadow">
+        <div class="header shadow skew">
             <h1>{frontmatter.title}</h1>
             <iconify-icon icon={`ph-${frontmatter.icon}`} class="center" width="64" height="64"></iconify-icon>
         </div>
@@ -21,13 +21,15 @@ const {frontmatter} = Astro.props;
     }
     
     iconify-icon {
-        /* color: var(--accent); */
+        color: var(--accent-alt);
     }
 
     .header {
+        margin-block: 2em;
         padding-block: 2em;
         color: var(--dark);
-        background-color: var(--accent);
+        background-color: var(--light);
         border-radius: 1rem;
+        border-inline: solid 0.5em var(--accent-alt);
     }
 </style>
