@@ -51,8 +51,7 @@ a:hover {
 
 .fancy {
   font-family: var(--font-family-fancy);
-  filter: drop-shadow(3px 5px 2px rgb(33 37 41 / 0.4));
-  /* letter-spacing: 0.25rem; */
+  filter: drop-shadow(0.1rem 0.2rem 0.1rem rgb(33 37 41 / 0.4));
 }
 
 .mono {
@@ -68,6 +67,15 @@ a:hover {
   & p {
     padding-block: 1em;
   }
+}
+
+.center {
+  display: grid;
+  place-content: center;
+}
+
+.shadow {
+  filter: drop-shadow(0.1rem 0.2rem 0.1rem rgb(33 37 41 / 0.4));
 }
 
 iconify-icon {
