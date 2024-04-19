@@ -1,0 +1,47 @@
+---
+import ResumeLayout from "../layouts/ResumeLayout.astro";
+import Social from "../components/general/Social.astro";
+import resume from '../data/resume.json';
+
+const title = "Testing Grounds"
+---
+<ResumeLayout title={title}>
+    <div class="content">
+        <blockquote>
+            <h1>W. Brett Egbert</h1>
+            <Social />
+            <p>An educator obsessed with the belief that things worth knowing should not be miserable to learn, continuously upskilling into the overlapping Venn diagram of math ed, assessment, and web development.</p>
+        </blockquote>
+        <h2 class="section-title">Experience</h2>
+        <div class="section">
+                {resume.experience.map((exp) => (
+                    <h3>{exp.company}</h3>
+                    <div class="location-type">
+                        <p>{exp.location}</p>
+                        <p>{exp.type}</p>
+                    </div>
+                    <div class="title-date">
+                        <p>{exp.title}</p>
+                        <p>{exp.date_range}</p>
+                    </div>
+                ))}
+        </div>
+        <h2 class="section-title">Education</h2>
+        <div class="section">
+            {resume.education.map((edu) => (
+                <h3>{edu.degree}</h3>
+                <p>{edu.major}</p>
+                <p>{edu.institution}</p>
+                <p>{edu.date_earned}</p>
+            ))}
+        </div>
+        <h2 class="section-title">Certification</h2>
+        <div class="section">
+            {resume.certifications.map((cert) => (
+                <h3>{cert.name}</h3>
+                <p>{cert.emphasis}</p>
+                <p>{cert.institution}</p>
+            ))}
+        </div>
+    </div>
+</ResumeLayout>
