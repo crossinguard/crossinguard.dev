@@ -1,4 +1,6 @@
 ---
+import { Icon } from 'astro-icon/components';
+
 const iconLinks: { label: string; href: string; icon: string }[] = [
 	{ 
 		label: 'Email', 
@@ -24,7 +26,7 @@ const iconLinks: { label: string; href: string; icon: string }[] = [
 				<span class="sr-only">
 					Go to {label} for Friends of the Sumas Library
 				</span>
-				<iconify-icon icon={`ph-${icon}`} width="32" height="32"></iconify-icon>
+				<Icon name={icon} />
 			</a>
 		))
 	}
@@ -42,9 +44,4 @@ const iconLinks: { label: string; href: string; icon: string }[] = [
 		text-decoration: none;
 		transition: all 0.2s ease-in-out;
 	}
-
-	iconify-icon {
-        position: relative;
-		top: 0.25rem;
-    }
 </style>

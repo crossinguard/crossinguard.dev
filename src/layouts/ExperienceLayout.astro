@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 import '../styles/experience.css'
+import { Icon } from 'astro-icon/components'
+import Construction from "../components/general/Construction.astro";
 
 const {frontmatter} = Astro.props;
 ---
@@ -8,22 +10,14 @@ const {frontmatter} = Astro.props;
     <div class="content">
         <div class="header shadow skew">
             <h1>{frontmatter.title}</h1>
-            <iconify-icon icon={`ph-${frontmatter.icon}`} class="center" width="64" height="64"></iconify-icon>
         </div>
+        <Icon name={frontmatter.icon} />
+        <Construction />
         <slot />
     </div>
 </BaseLayout>
 
 <style>
-    h1 {
-        text-align: center;
-        font-family: var(--font-family-mono);
-    }
-    
-    iconify-icon {
-        color: var(--accent-alt);
-    }
-
     .header {
         margin-block: 2em;
         padding-block: 2em;
@@ -31,5 +25,22 @@ const {frontmatter} = Astro.props;
         background-color: var(--light);
         border-radius: 1rem;
         border-inline: solid 0.5em var(--accent-alt);
+        max-width: 80%;
+        margin-inline: auto;
+    }
+
+    h1 {
+        text-align: center;
+        font-family: var(--font-family-mono);
+        padding-inline: 0.5em;
+        font-size: 1.5rem;
+        font-size: clamp(1.5rem, 2.5vw + 1rem, 2.5rem);
+    }
+
+    [data-icon] {
+        font-size: 4rem;
+        margin-inline: auto;
+        margin-block: 0.5em;
+        color: var(--accent-alt);
     }
 </style>

@@ -1,0 +1,9 @@
+[data-icon] {
+  position: relative;
+  top: 0.25rem;
+  font-size: 2rem;
+}
+
+[data-icon='venn'] {
+  margin-inline: auto;
+}
