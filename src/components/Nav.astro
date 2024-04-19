@@ -1,5 +1,10 @@
 ---
-const textLinks: { label: string; url: string }[] = [
+interface Link {
+  label: string; 
+  url: string;
+}
+
+const textLinks: Link[] = [
 	{ label: 'Home', url: '/' },
   { label: 'Articles', url: '/articles' },
   { label: 'Resume', url: '/resume' },

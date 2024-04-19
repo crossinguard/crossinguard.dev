@@ -4,6 +4,7 @@ body {
   background-color: var(--dark);
 }
 
+/* https://modern-fluid-typography.vercel.app/ */
 h1 {
   font-family: var(--font-family-fancy);
   font-size: 2.5rem;

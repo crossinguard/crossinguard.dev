@@ -1,7 +1,13 @@
 ---
 import { Icon } from 'astro-icon/components';
 
-const iconLinks: { label: string; href: string; icon: string }[] = [
+interface Link {
+	label: string;
+	href: string;
+	icon: string;
+}
+
+const iconLinks: Link[] = [
 	{ 
 		label: 'Email', 
 		href: 'mailto:brett@crossinguard.dev', 

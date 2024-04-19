@@ -4,6 +4,7 @@ interface Props {
 }
 
 const { date } = Astro.props;
+
 const adjustedDate = new Date(date);
 adjustedDate.setHours(date.getHours() + 8); // UTC to PT offset 8hrs
 ---
