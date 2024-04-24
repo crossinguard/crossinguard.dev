@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "crossinguard.dev",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -14,9 +14,9 @@
     "@astrojs/mdx": "^2.0.3",
     "@astrojs/rss": "^4.0.1",
     "@astrojs/sitemap": "^3.0.4",
+    "@astrojs/starlight": "^0.21.5",
     "astro": "^4.1.1",
     "astro-icon": "^1.1.0",
-    "decap-cms-app": "^3.1.8",
     "typescript": "^5.3.3"
   }
 }

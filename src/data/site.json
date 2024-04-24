@@ -1,0 +1,11 @@
+{
+  "title": "crossinguard.dev",
+  "description": "Personal website of W. Brett Egbert - mathematics educator, assessment specialist, web developer",
+  "url": "https://crossinguard.dev/",
+  "author": "Brett Egbert",
+  "nav": [
+    { "link": "/", "label": "Home" },
+    { "link": "/stories", "label": "Stories" },
+    { "link": "/resume", "label": "Resume" }
+  ]
+}

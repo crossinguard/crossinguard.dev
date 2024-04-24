@@ -1,18 +1,19 @@
 import { defineCollection, z } from 'astro:content';
+import { docsSchema } from '@astrojs/starlight/schema';
 
-const blogCollection = defineCollection({
-  type: 'content',
-  schema: z.object({
-    title: z.string(),
-    author: z.string(),
-    description: z.string(),
-    pubDate: z.coerce.date(),
-    updatedDate: z.coerce.date().optional(),
-    heroImage: z.string().optional(),
-    tags: z.array(z.string()),
-  }),
-});
-const articlesCollection = defineCollection({
+// const blogCollection = defineCollection({
+//   type: 'content',
+//   schema: z.object({
+//     title: z.string(),
+//     author: z.string(),
+//     description: z.string(),
+//     pubDate: z.coerce.date(),
+//     updatedDate: z.coerce.date().optional(),
+//     heroImage: z.string().optional(),
+//     tags: z.array(z.string()),
+//   }),
+// });
+const storiesCollection = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string(),
@@ -23,6 +24,7 @@ const articlesCollection = defineCollection({
 });
 
 export const collections = {
-  blog: blogCollection,
-  articles: articlesCollection,
+  // blog: blogCollection,
+  stories: storiesCollection,
+  docs: defineCollection({ schema: docsSchema() }),
 };
