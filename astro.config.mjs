@@ -10,7 +10,7 @@ export default defineConfig({
     sitemap(),
     icon(),
     starlight({
-      title: 'crossinguard.dev',
+      title: 'crossinguard.dev docs',
       logo: {
         src: './src/assets/cg-logo.svg',
         replacesTitle: true,
@@ -23,8 +23,8 @@ export default defineConfig({
       sidebar: [
         { label: 'Docs Overview', link: '/docs' },
         {
-          label: 'Astro',
-          autogenerate: { directory: 'astro' },
+          label: 'Web Dev',
+          autogenerate: { directory: 'webdev' },
         },
         {
           label: 'Reference',
