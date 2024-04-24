@@ -11,6 +11,10 @@ export default defineConfig({
     icon(),
     starlight({
       title: 'crossinguard.dev',
+      logo: {
+        src: './src/assets/cg-logo.svg',
+        replacesTitle: true,
+      },
       customCss: ['./src/styles/docs.css'],
       favicon: '/favicon.ico',
       social: {

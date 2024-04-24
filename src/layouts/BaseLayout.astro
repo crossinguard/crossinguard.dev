@@ -9,13 +9,13 @@ import '../styles/utils.css';
 import '../styles/icons.css';
 import '../styles/global.css';
 
-import { SITE_TITLE } from '../consts';
+import site from '../data/site.json';
+const {site_title} = site;
 
 interface Props {
   title?: string | undefined;
   description?: string | undefined;
 }
-
 const { title, description } = Astro.props;
 ---
 
@@ -35,7 +35,7 @@ const { title, description } = Astro.props;
     <meta name="msapplication-TileColor" content="#ffc40d">
     <meta name="theme-color" content="#ffffff">
 
-    <title>{title} | {SITE_TITLE}</title>
+    <title>{title} | {site_title}</title>
   </head>
 
   <body>
