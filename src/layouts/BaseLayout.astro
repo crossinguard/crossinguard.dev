@@ -9,20 +9,24 @@ import '../styles/utils.css';
 import '../styles/icons.css';
 import '../styles/global.css';
 
-import site from '../data/site.json';
-const {site_title} = site;
-
-interface Props {
-  title?: string | undefined;
-  description?: string | undefined;
+interface Website {
+  title: string;
+  description: string;
+  language: string;
 }
-const { title, description } = Astro.props;
+interface Props {
+  title: string;
+}
+
+import site from '../data/site.json';
+const { website }: { website: Website } = site;
+const { title } = Astro.props;
 ---
 
-<html lang="en">
+<html lang={website.language}>
   <head>
     <meta charset="UTF-8">
-    <meta name="description" property="og:description" content={description} />
+    <meta name="description" property="og:description" content={website.description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content={Astro.generator} />
 
@@ -35,7 +39,7 @@ const { title, description } = Astro.props;
     <meta name="msapplication-TileColor" content="#ffc40d">
     <meta name="theme-color" content="#ffffff">
 
-    <title>{title} | {site_title}</title>
+    <title>{title} | {website.title}</title>
   </head>
 
   <body>

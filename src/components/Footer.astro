@@ -1,12 +1,18 @@
 ---
-import Social from "./general/Social.astro";
+import Social from "./Social.astro";
 
+interface Author {
+  name: string;
+}
+
+import site from "../data/site.json";
+const { author }: { author: Author } = site;
 const today = new Date();
 ---
 
 <footer>
 	<div class="flex">
-		<p>W. Brett Egbert &copy; {today.getFullYear()}</p>
+		<p>{author.name} &copy; {today.getFullYear()}</p>
 		<Social />
 		<p>stay curious</p>
 	</div>

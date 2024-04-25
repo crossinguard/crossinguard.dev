@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Construction from "../components/general/Construction.astro";
+import Construction from "../components/Construction.astro";
+import StoriesList from "../components/StoriesList.astro";
 
 const title = 'Stories'
 ---
@@ -8,5 +9,6 @@ const title = 'Stories'
 	<div class="content">
 		<h1 class="center">{title}</h1>
 		<Construction />
+		<StoriesList />
 	</div>
 </BaseLayout>

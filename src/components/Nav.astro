@@ -1,21 +1,23 @@
 ---
-interface Link {
-  label: string; 
-  url: string;
+interface Nav {
+  url: string; 
+  name: string;
 }
 
-const textLinks: Link[] = [
-	{ label: 'Home', url: '/' },
-  { label: 'Stories', url: '/stories' },
-  { label: 'Resume', url: '/resume' },
-];
+interface Website {
+  nav: Nav[];
+}
+
+import site from "../data/site.json";
+const { website }: { website: Website } = site;
+
 ---
 <header>
   <nav class="navbar">
     <div class="brand"><a href="/" class="fancy cg">crossinguard<span class="dev">.dev</span></a></div>
     <ul class="nav-links">
       {
-        textLinks.map(({ label, url }) => (
+        website.nav.map(({ name, url }) => (
           <li class="nav-item">
             <a
             aria-current={Astro.url.pathname === url}
@@ -29,7 +31,7 @@ const textLinks: Link[] = [
             ]}
             href={url}
             >
-            {label}
+            {name}
             </a>
             </li>
             ))
