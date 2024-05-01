@@ -1,12 +1,14 @@
 ---
-title: 'Why "crossinguard"?'
-pubDate: 2024-04-25
-description: 'Halo, math class, and the origins of "crossinguard"'
-era: 'Early 2000s'
+title: 'Band'
+pubDate: 2024-04-28
+description: 'Tonguing the sax and performing with the United States Marine Band'
+era: 'Late 1990s - Early 2000s'
 tags:
+    - 'mississippi'
+    - 'middle school'
     - 'ohio'
     - 'high school'
-    - 'halo'
+    - 'sax'
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi quis hendrerit dolor magna eget est. Nam at lectus urna duis. Id venenatis a condimentum vitae sapien pellentesque habitant morbi. Tellus elementum sagittis vitae et leo. Facilisis mauris sit amet massa vitae. Ornare lectus sit amet est placerat in. Blandit volutpat maecenas volutpat blandit. Quis viverra nibh cras pulvinar mattis nunc sed blandit. Porttitor rhoncus dolor purus non enim praesent. Sem viverra aliquet eget sit amet tellus. Facilisis gravida neque convallis a cras semper auctor neque vitae. Vestibulum lorem sed risus ultricies tristique nulla aliquet enim tortor. Donec massa sapien faucibus et molestie ac feugiat sed lectus. Tellus in metus vulputate eu scelerisque felis. Mattis aliquam faucibus purus in massa tempor nec feugiat. Phasellus vestibulum lorem sed risus ultricies tristique nulla aliquet. Non nisi est sit amet. Nisi scelerisque eu ultrices vitae auctor eu. Praesent semper feugiat nibh sed pulvinar proin gravida hendrerit lectus.
