@@ -2,7 +2,6 @@
 import { type CollectionEntry, getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import FormattedDate from '../../components/FormattedDate.astro';
-import Image from 'astro/components/Image.astro';
 import roots from '../../assets/roots.svg';
 
 interface Props {
@@ -34,7 +33,7 @@ const { Content } = await entry.render();
 	<div class="story">
 		<Content />
 	</div>
-	<Image src={roots} alt="" class="root"/>
+	<img src={roots.src} alt="" class="root"/>
   </div>
 </BaseLayout>
 
