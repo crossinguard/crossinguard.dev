@@ -3,11 +3,8 @@ layout: ../layouts/ResumeLayout.astro
 title: 'Resume'
 ---
 
-import Social from '../components/Social.astro';
-
 > # W. Brett Egbert
 >
-> <Social />
 > _An educator obsessed with the belief that things worth knowing should not be miserable
 > to learn, continuously upskilling into the overlapping Venn diagram of math ed,
 > assessment, and web development._
