@@ -28,9 +28,9 @@ const posts = (await getCollection('stories')).sort(
     .story-list {
         display: flex;
         flex-direction: column;
-        gap: 1em;
+        gap: 3em;
         list-style-type: none;
-        padding: 0;
+        padding: 5em 0;
         width: fit-content;
         margin-inline: auto;
     }
@@ -42,7 +42,7 @@ const posts = (await getCollection('stories')).sort(
     
     .story {
         padding-inline-start: 1em;
-        border-inline-start: solid transparent;
+        border-inline-start: solid var(--gray);
         transition: all 0.2s ease-in-out;
 
         .title {

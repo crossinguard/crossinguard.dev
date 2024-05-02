@@ -25,6 +25,7 @@
   --teal-9: #087f5b;
 
   /* THEME COLORS */
+  --black: var(--gray-9);
   --dark: var(--gray-8);
   --gray: var(--gray-5);
   --light: var(--gray-0);
