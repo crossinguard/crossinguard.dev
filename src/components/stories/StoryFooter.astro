@@ -1,0 +1,20 @@
+---
+import { Image } from 'astro:assets';
+import footerImg from '../../assets/roots.svg';
+
+const alt = '';
+---
+
+<div class="story-footer content">
+  <Image src={footerImg} alt={alt} height="204" class="story-footer-image" />
+</div>
+
+<style>
+  /* TO DO: fix small screen separation of border and svg */
+  .story-footer {
+    border-block-start: solid var(--gray-7);
+  }
+  .story-footer-image {
+    margin-inline: auto;
+  }
+</style>

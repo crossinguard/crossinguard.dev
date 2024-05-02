@@ -1,6 +1,6 @@
 ---
 interface Nav {
-  url: string; 
+  url: string;
   name: string;
 }
 
@@ -8,34 +8,36 @@ interface Website {
   nav: Nav[];
 }
 
-import site from "../data/site.json";
+import site from '../data/site.json';
 const { website }: { website: Website } = site;
-
 ---
+
 <header>
   <nav class="navbar">
-    <div class="brand"><a href="/" class="fancy cg">crossinguard<span class="dev">.dev</span></a></div>
+    <div class="brand">
+      <a href="/" class="fancy cg">crossinguard<span class="dev">.dev</span></a>
+    </div>
     <ul class="nav-links">
       {
         website.nav.map(({ name, url }) => (
           <li class="nav-item">
             <a
-            aria-current={Astro.url.pathname === url}
-            class:list={[
-              'link',
-              {
-                active:
-                Astro.url.pathname === url ||
-                (url !== '/' && Astro.url.pathname.startsWith(url)),
-              },
-            ]}
-            href={url}
+              aria-current={Astro.url.pathname === url}
+              class:list={[
+                'link',
+                {
+                  active:
+                    Astro.url.pathname === url ||
+                    (url !== '/' && Astro.url.pathname.startsWith(url)),
+                },
+              ]}
+              href={url}
             >
-            {name}
+              {name}
             </a>
-            </li>
-            ))
-          }
+          </li>
+        ))
+      }
     </ul>
   </nav>
 </header>
@@ -51,24 +53,24 @@ const { website }: { website: Website } = site;
     width: 90%;
     max-width: 1100px;
     margin-inline: auto;
-}
+  }
 
-.nav-links {
+  .nav-links {
     display: flex;
     list-style: none;
     gap: 1em;
     padding: 0;
-}
+  }
 
-.link {
+  .link {
     color: var(--light);
     letter-spacing: 1px;
     text-decoration: none;
     font-size: 1.25rem;
     font-size: clamp(
-        1.25rem,
-        1.0294117647058822rem + 0.9411764705882352vw,
-        1.5rem
+      1.25rem,
+      1.0294117647058822rem + 0.9411764705882352vw,
+      1.5rem
     );
     border-bottom: 4px solid transparent;
     transition: all 0.2s ease-in-out;
@@ -92,9 +94,9 @@ const { website }: { website: Website } = site;
     text-decoration: none;
     font-size: 1.25rem;
     font-size: clamp(
-        1.25rem,
-        1.0294117647058822rem + 0.9411764705882352vw,
-        1.5rem
+      1.25rem,
+      1.0294117647058822rem + 0.9411764705882352vw,
+      1.5rem
     );
   }
 
@@ -104,7 +106,3 @@ const { website }: { website: Website } = site;
     }
   }
 </style>
-
-
-
-

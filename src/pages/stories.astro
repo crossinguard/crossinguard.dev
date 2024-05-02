@@ -1,12 +1,13 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import StoriesList from "../components/StoriesList.astro";
+import BaseLayout from '../layouts/BaseLayout.astro';
+import StoriesList from '../components/StoriesList.astro';
 
-const title = 'Stories'
+const title = 'Stories';
 ---
+
 <BaseLayout title={title}>
-	<div class="content">
-		<h1 class="center">{title}</h1>
-		<StoriesList />
-	</div>
+  <div class="content">
+    <h1 class="center">{title}</h1>
+    <StoriesList />
+  </div>
 </BaseLayout>

@@ -1,20 +1,33 @@
 ---
-import BaseLayout from "./BaseLayout.astro";
-import type { MarkdownLayoutProps } from 'astro';
+import BaseLayout from './BaseLayout.astro';
+// import type { MarkdownLayoutProps } from 'astro';
 import '../styles/stories.css';
+import StoryHeader from '../components/stories/StoryHeader.astro';
+import StoryFooter from '../components/stories/StoryFooter.astro';
 
-type Props = MarkdownLayoutProps<{
+interface Props {
   title: string;
   pubDate: Date;
-  author: string;
-  date: string;
-}>;
+  description: string;
+  era?: string;
+  tags?: string[];
+}
 
-const {frontmatter} = Astro.props;
+const { title, pubDate, description, era, tags } = Astro.props;
 ---
-<BaseLayout title={frontmatter.title}>
-  <h1>{frontmatter.title}</h1>
+
+<BaseLayout title={title}>
+  <StoryHeader
+    title={title}
+    pubDate={pubDate}
+    description={description}
+    era={era}
+    tags={tags}
+  />
+
   <div class="content">
     <slot />
   </div>
+
+  <StoryFooter />
 </BaseLayout>

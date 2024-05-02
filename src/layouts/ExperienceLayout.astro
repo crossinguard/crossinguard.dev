@@ -1,46 +1,47 @@
 ---
-import BaseLayout from "./BaseLayout.astro";
-import { Icon } from 'astro-icon/components'
-import Construction from "../components/Construction.astro";
-import '../styles/experience.css'
+import BaseLayout from './BaseLayout.astro';
+import { Icon } from 'astro-icon/components';
+import Construction from '../components/Construction.astro';
+import '../styles/experience.css';
 
-const {frontmatter} = Astro.props;
+const { frontmatter } = Astro.props;
 ---
+
 <BaseLayout title={frontmatter.title}>
-    <div class="content">
-        <div class="header shadow skew">
-            <h1>{frontmatter.title}</h1>
-        </div>
-        <Icon name={frontmatter.icon} />
-        <Construction />
-        <slot />
+  <div class="content">
+    <div class="header shadow skew">
+      <h1>{frontmatter.title}</h1>
     </div>
+    <Icon name={frontmatter.icon} />
+    <Construction />
+    <slot />
+  </div>
 </BaseLayout>
 
 <style>
-    .header {
-        margin-block: 2em;
-        padding-block: 2em;
-        color: var(--dark);
-        background-color: var(--light);
-        border-radius: 1rem;
-        border-inline: solid 0.5em var(--accent-alt);
-        max-width: 80%;
-        margin-inline: auto;
-    }
+  .header {
+    margin-block: 2em;
+    padding-block: 2em;
+    color: var(--dark);
+    background-color: var(--light);
+    border-radius: 1rem;
+    border-inline: solid 0.5em var(--accent-alt);
+    max-width: 80%;
+    margin-inline: auto;
+  }
 
-    h1 {
-        text-align: center;
-        font-family: var(--font-family-mono);
-        padding-inline: 0.5em;
-        font-size: 1.5rem;
-        font-size: clamp(1.5rem, 2.5vw + 1rem, 2.5rem);
-    }
+  h1 {
+    text-align: center;
+    font-family: var(--font-family-mono);
+    padding-inline: 0.5em;
+    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 2.5vw + 1rem, 2.5rem);
+  }
 
-    [data-icon] {
-        font-size: 4rem;
-        margin-inline: auto;
-        margin-block: 0.5em;
-        color: var(--accent-alt);
-    }
+  [data-icon] {
+    font-size: 4rem;
+    margin-inline: auto;
+    margin-block: 0.5em;
+    color: var(--accent-alt);
+  }
 </style>

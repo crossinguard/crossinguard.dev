@@ -1,6 +1,6 @@
 ---
 interface Props {
-	date: Date;
+  date: Date;
 }
 
 const { date } = Astro.props;
@@ -10,12 +10,12 @@ adjustedDate.setHours(date.getHours() + 8); // UTC to PT offset 8hrs
 ---
 
 <time datetime={adjustedDate.toISOString()}>
-	{
-		adjustedDate.toLocaleDateString('en-GB', {
-			year: 'numeric',
-			month: 'short',
-			day: 'numeric',
-			timeZone: 'America/Los_Angeles'
-		})
-	}
+  {
+    adjustedDate.toLocaleDateString('en-GB', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+      timeZone: 'America/Los_Angeles',
+    })
+  }
 </time>

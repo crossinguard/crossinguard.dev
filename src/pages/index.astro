@@ -1,21 +1,26 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import Hero from "../components/Hero.astro";
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
 import { Icon } from 'astro-icon/components';
 
-const title = 'Home'
-const size = 128
+const title = 'Home';
+const size = 128;
 ---
+
 <BaseLayout title={title}>
-    <Hero />
-	<div class="content">
-        <p>I am an educator obsessed with the belief that things worth knowing should not be miserable to learn. Each day I explore the overlapping Venn diagram of math ed, assessment, and web development.</p>
-        <Icon name="venn" size={size} />
-	</div>
+  <Hero />
+  <div class="content">
+    <p>
+      I am an educator obsessed with the belief that things worth knowing should
+      not be miserable to learn. Each day I explore the overlapping Venn diagram
+      of math ed, assessment, and web development.
+    </p>
+    <Icon name="venn" size={size} />
+  </div>
 </BaseLayout>
 
 <style>
-    p {
-        text-align: center;
-    }
+  p {
+    text-align: center;
+  }
 </style>

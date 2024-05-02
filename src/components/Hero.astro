@@ -1,20 +1,35 @@
 <div class="hero container">
   <div class="text">
-    <h2><span class="william">William</span> <span class="brett">Brett</span> <span class="egbert">Egbert</span></h2>
+    <h2>
+      <span class="william">William</span>
+      <span class="brett">Brett</span>
+      <span class="egbert">Egbert</span>
+    </h2>
     <ul>
-      <li><a href="/resume/mathematics-educator" class="xp-link">mathematics educator</a></li>
+      <li>
+        <a href="/resume/mathematics-educator" class="xp-link"
+          >mathematics educator</a>
+      </li>
       <!-- <li>data analyst</li> -->
-      <li><a href="/resume/assessment-specialist" class="xp-link">assessment specialist</a></li>
+      <li>
+        <a href="/resume/assessment-specialist" class="xp-link"
+          >assessment specialist</a>
+      </li>
       <li><a href="/resume/web-developer" class="xp-link">web developer</a></li>
     </ul>
   </div>
   <div class="logo shadow">
-    <img src="/assets/cg-logo-full.svg" alt="crossinguard.dev" height="350" width="350">
+    <img
+      src="/assets/cg-logo-full.svg"
+      alt="crossinguard.dev"
+      height="350"
+      width="350"
+    />
   </div>
 </div>
 
 <style>
-	.hero {
+  .hero {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,7 +48,7 @@
     font-size: 2rem;
     font-size: clamp(2rem, 2vw + 1rem, 2.5rem);
   }
-  
+
   :is(.william, .brett, .egbert) {
     transition: color 0.4s ease-in-out;
   }
@@ -41,7 +56,7 @@
   .william {
     font-weight: normal;
   }
-  
+
   .brett {
     color: var(--accent);
   }
@@ -50,18 +65,18 @@
   .text:hover .egbert {
     color: var(--gray);
   }
-  
+
   .text:hover .brett {
     color: var(--accent-alt);
   }
-  
+
   ul {
     display: flex;
     flex-direction: column;
     padding: 0;
     color: var(--gray);
   }
-  
+
   li {
     font-size: 1.25rem;
     font-size: clamp(1.25rem, 1vw + 1rem, 2rem);
@@ -74,19 +89,19 @@
     color: var(--gray-light);
     text-decoration: none;
   }
-  
+
   li:hover {
     color: var(--light);
   }
-  
+
   li::before {
-    content: "< ";
+    content: '< ';
     color: transparent;
     transition: color 0.2s ease-in;
   }
 
   li::after {
-    content: " />";
+    content: ' />';
     color: transparent;
     transition: color 0.2s ease-in;
   }

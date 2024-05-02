@@ -6,7 +6,7 @@ const storiesCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     pubDate: z.coerce.date(),
-    description: z.string().optional(),
+    description: z.string(),
     era: z.string().optional(),
     tags: z.array(z.string()).optional(),
   }),

@@ -1,5 +1,5 @@
 ---
-import { Icon } from "astro-icon/components";
+import { Icon } from 'astro-icon/components';
 
 interface Social {
   name: string;
@@ -12,33 +12,33 @@ interface Author {
   social: Social[];
 }
 
-import site from "../data/site.json";
+import site from '../data/site.json';
 const { author }: { author: Author } = site;
-
 ---
+
 <div class="social-links">
-	{
-		author.social.map(({ url, icon, name }) => (
-			<a href={url} class="social-link" target="_blank">
-				<span class="sr-only">
-					Go to {name} for {author.name} ({author.handle})
-				</span>
-				<Icon name={icon} />
-			</a>
-		))
-	}
+  {
+    author.social.map(({ url, icon, name }) => (
+      <a href={url} class="social-link" target="_blank">
+        <span class="sr-only">
+          Go to {name} for {author.name} ({author.handle})
+        </span>
+        <Icon name={icon} />
+      </a>
+    ))
+  }
 </div>
 
 <style>
-	.social-links {
-		display: flex;
-		justify-content: center;
-		height: 2.5rem;
-		gap: 1em;
-		margin-block: 1em;
-	}
-	.social-links a {
-		text-decoration: none;
-		transition: all 0.2s ease-in-out;
-	}
+  .social-links {
+    display: flex;
+    justify-content: center;
+    height: 2.5rem;
+    gap: 1em;
+    margin-block: 1em;
+  }
+  .social-links a {
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+  }
 </style>

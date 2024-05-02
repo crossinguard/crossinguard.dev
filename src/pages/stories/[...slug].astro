@@ -1,85 +1,31 @@
 ---
 import { type CollectionEntry, getCollection } from 'astro:content';
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import FormattedDate from '../../components/FormattedDate.astro';
-import roots from '../../assets/roots.svg';
+import StoriesLayout from '../../layouts/StoriesLayout.astro';
 
 interface Props {
-	entry: CollectionEntry<'stories'>
+  entry: CollectionEntry<'stories'>;
 }
 
 export async function getStaticPaths() {
-	const posts = await getCollection('stories');
-	return posts.map((entry) => ({
-		params: { slug: entry.slug },
-		props: { entry },
-	}));
+  const posts = await getCollection('stories');
+  return posts.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
 }
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
-<BaseLayout title={entry.data.title}>
-  <div class="content">
-	<div class="head">
-		<h1 class="title">{entry.data.title}</h1>
-		<p class="date">published <FormattedDate date={entry.data.pubDate} /></p>
-		<p class="description">{entry.data.description}</p>
-		<div class="meta">
-			<p class="era">era: {entry.data.era}</p>
-			<p class="tags">{entry.data.tags}</p>
-		</div>
-	</div>
-	<div class="story">
-		<Content />
-	</div>
-	<img src={roots.src} alt="" class="root"/>
-  </div>
-</BaseLayout>
 
-<style>
-	.head {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		gap: 0.5em;
-		background: var(--black);
-		border-radius: 0.5rem;
-		padding: 2em;
-		margin-block: 2em;
-	}
-	.title {
-		text-align: center;
-		max-width: 25ch;
-		border-bottom: solid var(--accent-alt);
-	}
-	.date {
-		font-size: smaller;
-		color: var(--gray);
-		font-style: italic;
-	}
-	.description::before {
-		content: "[ ";
-		color: var(--accent);
-	}
-	.description::after {
-		content: " ]";
-		color: var(--accent);
-	}
-	.meta {
-		display: none;
-		/* display: flex;
-		width: 100%;
-		justify-content: space-between */
-	}
-	.meta p {
-		padding: 0;
-	}
-	.story {
-		border-block-end: solid var(--gray-7);
-	}
-	.root {
-		margin-inline: auto;
-	}
-</style>
+<StoriesLayout
+  title={entry.data.title}
+  pubDate={entry.data.pubDate}
+  description={entry.data.description}
+  era={entry.data.era}
+  tags={entry.data.tags}
+>
+  <div class="story">
+    <Content />
+  </div>
+</StoriesLayout>
