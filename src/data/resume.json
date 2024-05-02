@@ -1,14 +1,24 @@
 {
+  "candidate": {
+    "name": "W. Brett Egbert",
+    "location": "Washington, USA",
+    "about": "An educator obsessed with the belief that things worth knowing should not be miserable to learn, continuously upskilling into the overlapping Venn diagram of math ed, assessment, and web development."
+  },
   "experience": [
     {
       "company": "Self",
       "location": "Whatcom County, WA",
       "type": "remote",
-      "title": "Contract work",
-      "date_range": "Jul 2023 - current",
-      "responsibilities": [
-        "Coded, deployed, and managed static websites based on client design files, utilizing the Astro framework for responsive & accessible information",
-        "Provided subject matter expertise as a Python coding and assessment specialist for university course design, directly authoring interactive coding labs, traditional multiple choice items, and targeted formative items in alignment with high level design specifications"
+      "roles": [
+        {
+          "title": "Contract work",
+          "department": "Freelance",
+          "date_range": "Jul 2023 - current",
+          "responsibilities": [
+            "Coded, deployed, and managed static websites based on client design files, utilizing the Astro framework for responsive & accessible information",
+            "Provided subject matter expertise as a Python coding and assessment specialist for university course design, directly authoring interactive coding labs, traditional multiple choice items, and targeted formative items in alignment with high level design specifications"
+          ]
+        }
       ]
     },
     {
@@ -50,13 +60,28 @@
     {
       "company": "Alpine School District",
       "location": "American Fork, UT",
-      "title": "Mathematics Instructor & Department Chair",
-      "date_range": "Aug 2012 - May 2020",
-      "responsibilities": [
-        "Managed math department of 16 educators, including hiring, scheduling, peer evaluations, training, and mentoring of new instructors",
-        "Utilized LMS tools and defined content competencies to generate & analyze data to drive curriculum and assessment iterations",
-        "Designed courses in alignment with the Common Core, including course scope & sequence, original lesson plans & presentations, instructional video recordings, custom assessments, and application-based projects",
-        "Provided direct instruction in an adaptive learning environment to thousands of students in both in-person and remote classrooms, specializing in building relationships with students that have historically struggled in mathematics"
+      "type": "in person",
+      "roles": [
+        {
+          "title": "Mathematics Instructor & Department Chair",
+          "department": "Skyridge High School",
+          "date_range": "Aug 2016 - May 2020",
+          "responsibilities": [
+            "Managed math department of 16 educators, including hiring, scheduling, peer evaluations, training, and mentoring of new instructors",
+            "Increase vertical alignment for student mathematical journey using by creating fixed primary content teams with common secondary courses allowing more effective & consistent collaboration",
+            "Coached the schools' first esports team in their inaugural season of Rocket League"
+          ]
+        },
+        {
+          "title": "Mathematics Instructor",
+          "department": "Lehi High School",
+          "date_range": "Aug 2012 - May 2016",
+          "responsibilities": [
+            "Utilized LMS tools and defined content competencies to generate & analyze data to drive curriculum and assessment iterations",
+            "Designed courses in alignment with the Common Core, including course scope & sequence, original lesson plans & presentations, instructional video recordings, custom assessments, and application-based projects",
+            "Provided direct instruction in an adaptive learning environment to thousands of students in both in-person and remote classrooms, specializing in building relationships with students that have historically struggled in mathematics"
+          ]
+        }
       ]
     }
   ],
@@ -80,19 +105,20 @@
       "date_earned": "2012"
     }
   ],
-  "certifications": [
+  "certification": [
     {
-      "name": "Professional Educator License",
+      "cert_name": "Professional Educator License",
       "emphasis": "Mathematics",
       "institution": "State of Washington"
     },
     {
-      "name": "IT Operations Specialist",
-      "emphasis": "A+, Network+",
+      "cert_name": "IT Operations Specialist",
+      "emphasis": "Technical support & IT operations; network implementations, security, & troubleshooting",
       "institution": "CompTIA"
     },
     {
-      "name": "Project+",
+      "cert_name": "Project+",
+      "emphasis": "IT project management",
       "institution": "CompTIA"
     }
   ]

@@ -1,0 +1,85 @@
+---
+interface Role {
+  title: string;
+  department: string;
+  date_range: string;
+  responsibilities: string[];
+}
+
+interface Company {
+  company: string;
+  location: string;
+  type: string;
+  roles: Role[];
+}
+
+interface ExperienceData {
+  experience: Company[];
+}
+
+import data from '../../data/resume.json';
+const { experience }: ExperienceData = data;
+---
+
+<section class="experience">
+  <h2>Experience</h2>
+  <div class="experience-list">
+    {
+      experience.map((company) => (
+        <div class="experience-entry">
+          <div class="company">
+            <h3>{company.company}</h3>
+            <div class="company-details">
+              <p>{company.location}</p>
+              <p>{company.type}</p>
+            </div>
+          </div>
+          {company.roles.map((role) => (
+            <div class="role">
+              <div class="role-header">
+                <h4>{role.title}</h4>
+                <div class="role-details">
+                  <p>{role.department}</p>
+                  <p>{role.date_range}</p>
+                </div>
+              </div>
+              <ul>
+                {role.responsibilities.map((responsibility) => (
+                  <li>{responsibility}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .experience-entry {
+    padding-block: 1em;
+  }
+  .role {
+    width: 95%;
+    margin-inline-start: auto;
+  }
+  :is(.company, .role-header) {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0 1em;
+    padding-block: 0.5em;
+  }
+  :is(.company-details, .role-details) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 1em;
+    font-style: italic;
+    font-size: smaller;
+
+    p {
+      padding: 0;
+    }
+  }
+</style>

@@ -1,47 +1,20 @@
-:is(h1, h2, h3, h4) {
-  padding-block-start: 0.5em;
-}
-
-#experience h1 {
-  letter-spacing: 0.25rem;
-}
-
 h2::before {
   content: '< ';
   color: var(--accent);
 }
-
 h2::after {
   content: ' >';
   color: var(--accent);
 }
-
-h3 {
-  padding-inline-start: 2ch;
-}
-
 h3::before {
   content: '# ';
   color: var(--accent);
 }
-
-h4 {
-  padding-inline-start: 4ch;
-}
-
 h4::before {
   content: '+ ';
   color: var(--accent);
 }
 
-ul {
-  padding-inline-start: 8ch;
-}
-
-blockquote {
-  text-align: center;
-  border-inline-start: solid var(--accent);
-  margin-inline: auto;
-  margin-block: 1em;
-  padding-inline: 2em;
+section {
+  padding-block: 3em;
 }

@@ -1,0 +1,55 @@
+---
+interface Degree {
+  degree: string;
+  major: string;
+  institution: string;
+  date_earned: string;
+}
+
+interface EducationData {
+  education: Degree[];
+}
+
+import data from '../../data/resume.json';
+const { education }: EducationData = data;
+---
+
+<section class="education">
+  <h2>Education</h2>
+  <div class="education-list">
+    {
+      education.map((degree) => (
+        <div class="education-entry">
+          <h3>{degree.degree}</h3>
+          <div class="education-details">
+            <p>{degree.major}</p>
+            <p>{degree.institution}</p>
+            <p>{degree.date_earned}</p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .education-entry {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0 1em;
+    padding-block: 0.5em;
+    width: 95%;
+    margin-inline-start: auto;
+    padding-block: 1em;
+  }
+  .education-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 1em;
+
+    p {
+      padding: 0;
+    }
+  }
+</style>

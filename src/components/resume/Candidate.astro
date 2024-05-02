@@ -1,0 +1,48 @@
+---
+import Social from '../../components/Social.astro';
+
+interface Candidate {
+  name: string;
+  location: string;
+  about: string;
+}
+
+interface CandidateData {
+  candidate: Candidate;
+}
+
+import data from '../../data/resume.json';
+const { candidate }: CandidateData = data;
+---
+
+<section class="candidate shadow">
+  <h1 class="name">{candidate.name}</h1>
+  <Social />
+  <p class="about">{candidate.about}</p>
+  <p class="location">located in {candidate.location}</p>
+</section>
+
+<style>
+  .candidate {
+    text-align: center;
+    border-inline-start: solid var(--accent);
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
+    /* margin-inline: auto; */
+    margin-block: 2em;
+    padding: 2em;
+    background: var(--black);
+  }
+  .about::before {
+    content: '[ ';
+    color: var(--accent);
+  }
+  .about::after {
+    content: ' ]';
+    color: var(--accent);
+  }
+  .location {
+    font-style: italic;
+    text-align: end;
+  }
+</style>

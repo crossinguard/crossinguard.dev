@@ -1,0 +1,53 @@
+---
+interface Cert {
+  cert_name: string;
+  emphasis: string;
+  institution: string;
+}
+
+interface CertificationData {
+  certification: Cert[];
+}
+
+import data from '../../data/resume.json';
+const { certification }: CertificationData = data;
+---
+
+<section class="certification">
+  <h2>Certification</h2>
+  <div class="certification-list">
+    {
+      certification.map((cert) => (
+        <div class="certification-entry">
+          <h3>{cert.cert_name}</h3>
+          <div class="certification-details">
+            <p>{cert.emphasis}</p>
+            <p>{cert.institution}</p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .certification-entry {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0 1em;
+    padding-block: 0.5em;
+    width: 95%;
+    margin-inline-start: auto;
+    padding-block: 1em;
+  }
+  .certification-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 1em;
+
+    p {
+      padding: 0;
+    }
+  }
+</style>
