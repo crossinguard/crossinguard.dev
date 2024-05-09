@@ -1,0 +1,102 @@
+---
+import { Icon } from 'astro-icon/components';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('stories')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<div class="story-list grid">
+  {
+    posts.map((post) => (
+      <div class="card">
+        <a href={`/stories/${post.slug}/`} class="story">
+          <h2 class="title">{post.data.title}</h2>
+          <div class="info">
+            <p class="description">{post.data.description}</p>
+            <div class="meta">
+              <p class="era">
+                <Icon name="clock-counter-clockwise" />
+                {post.data.era}
+              </p>
+              <ul class="tags">
+                {post.data.tags.map((tag) => (
+                  <li class="tag">#{tag}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </a>
+      </div>
+    ))
+  }
+</div>
+
+<style>
+  .grid {
+    --min: 20ch;
+    --gap: 1rem;
+
+    display: grid;
+    grid-gap: var(--gap);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
+  }
+  .story-list {
+    padding-block: 2em;
+  }
+  .card {
+    background-color: var(--black);
+    border-radius: 0 3rem;
+    padding: 1em;
+    box-shadow: 0.15rem 0.15rem var(--gray);
+    transition: all 0.2s ease-in-out;
+  }
+  .card:hover {
+    box-shadow: 0.3rem 0.3rem var(--accent);
+  }
+  .story {
+    text-decoration: none;
+  }
+  .title {
+    font-size: 1.25rem;
+    font-size: clamp(1.25rem, 1rem + 1vw, 1.5rem);
+    text-align: center;
+  }
+  .description {
+    color: var(--light);
+  }
+  .meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    color: var(--gray);
+    border-block-start: dotted var(--dark);
+    padding-block-start: 1rem;
+  }
+  .era {
+    font-size: smaller;
+    padding: 0;
+    text-align: center;
+  }
+  [data-icon='clock-counter-clockwise'] {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+  }
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    justify-content: center;
+    font-size: smaller;
+    padding: 0;
+    list-style: none;
+  }
+  .tag {
+    background-color: var(--dark);
+    color: var(--light);
+    border-radius: 0.25rem;
+    padding: 0 0.5em;
+  }
+</style>

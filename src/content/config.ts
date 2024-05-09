@@ -6,8 +6,8 @@ const storiesCollection = defineCollection({
     title: z.string(),
     pubDate: z.coerce.date(),
     description: z.string(),
-    era: z.string().optional(),
-    tags: z.array(z.string()).optional(),
+    era: z.string(),
+    tags: z.array(z.string()),
   }),
 });
 
