@@ -6,15 +6,16 @@ const alt = '';
 ---
 
 <div class="story-footer content">
-  <Image src={footerImg} alt={alt} height="204" class="story-footer-image" />
+  <div class="roots center">
+    <Image src={footerImg} alt={alt} height="204" />
+  </div>
 </div>
 
 <style>
-  /* TO DO: fix small screen separation of border and svg */
-  .story-footer {
+  .roots {
     border-block-start: solid var(--gray-7);
   }
-  .story-footer-image {
-    margin-inline: auto;
+  .roots img {
+    height: auto;
   }
 </style>

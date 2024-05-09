@@ -1,0 +1,27 @@
+---
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+  era: string;
+}
+
+const { era } = Astro.props;
+---
+
+<p class="era">
+  <Icon name="clock-counter-clockwise" />
+  {era}
+</p>
+
+<style>
+  .era {
+    font-size: smaller;
+    padding: 0;
+    text-align: center;
+  }
+  [data-icon='clock-counter-clockwise'] {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+  }
+</style>
