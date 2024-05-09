@@ -1,6 +1,6 @@
 ---
-title: 'Band'
-pubDate: 2024-04-28
+title: 'Band [draft]'
+pubDate: 2024-05-09
 description: 'Tonguing the sax and performing with the United States Marine Band'
 era: 'Late 1990s - Early 2000s'
 tags:
@@ -11,12 +11,8 @@ tags:
     - 'sax'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi quis hendrerit dolor magna eget est. Nam at lectus urna duis. Id venenatis a condimentum vitae sapien pellentesque habitant morbi. Tellus elementum sagittis vitae et leo. Facilisis mauris sit amet massa vitae. Ornare lectus sit amet est placerat in. Blandit volutpat maecenas volutpat blandit. Quis viverra nibh cras pulvinar mattis nunc sed blandit. Porttitor rhoncus dolor purus non enim praesent. Sem viverra aliquet eget sit amet tellus. Facilisis gravida neque convallis a cras semper auctor neque vitae. Vestibulum lorem sed risus ultricies tristique nulla aliquet enim tortor. Donec massa sapien faucibus et molestie ac feugiat sed lectus. Tellus in metus vulputate eu scelerisque felis. Mattis aliquam faucibus purus in massa tempor nec feugiat. Phasellus vestibulum lorem sed risus ultricies tristique nulla aliquet. Non nisi est sit amet. Nisi scelerisque eu ultrices vitae auctor eu. Praesent semper feugiat nibh sed pulvinar proin gravida hendrerit lectus.
+CURRENTLY BEING WRITTEN
 
-Eu facilisis sed odio morbi quis commodo odio aenean sed. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit sed. Mi quis hendrerit dolor magna eget est lorem. Enim diam vulputate ut pharetra sit amet aliquam. Volutpat diam ut venenatis tellus in metus. Habitasse platea dictumst quisque sagittis purus sit amet volutpat. Volutpat maecenas volutpat blandit aliquam etiam erat. Nunc non blandit massa enim nec. Blandit turpis cursus in hac habitasse platea. Nec ullamcorper sit amet risus nullam eget. Arcu cursus euismod quis viverra nibh cras. Elementum eu facilisis sed odio morbi quis commodo odio. Suscipit tellus mauris a diam.
+## The Setup
 
-Pellentesque habitant morbi tristique senectus et. Mauris cursus mattis molestie a iaculis at erat pellentesque adipiscing. Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi tristique. Gravida neque convallis a cras. Faucibus et molestie ac feugiat sed lectus vestibulum mattis. Commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Fermentum iaculis eu non diam phasellus vestibulum. Suspendisse ultrices gravida dictum fusce ut placerat orci. Purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus. Vitae turpis massa sed elementum tempus egestas sed sed. Ante metus dictum at tempor. Pellentesque nec nam aliquam sem et tortor consequat id porta. Quis imperdiet massa tincidunt nunc. Fermentum iaculis eu non diam phasellus vestibulum lorem sed risus. Proin sagittis nisl rhoncus mattis rhoncus. Fermentum leo vel orci porta.
-
-Facilisi morbi tempus iaculis urna id volutpat lacus. Mi sit amet mauris commodo quis imperdiet. Et odio pellentesque diam volutpat commodo sed. Purus faucibus ornare suspendisse sed nisi lacus. Eget nulla facilisi etiam dignissim diam. Diam sit amet nisl suscipit adipiscing bibendum est ultricies integer. Interdum velit euismod in pellentesque massa placerat duis ultricies lacus. Blandit cursus risus at ultrices. Non arcu risus quis varius. Pellentesque habitant morbi tristique senectus et netus et. Sem fringilla ut morbi tincidunt augue interdum velit euismod. Viverra vitae congue eu consequat. Turpis egestas maecenas pharetra convallis posuere morbi leo. Cras adipiscing enim eu turpis. Montes nascetur ridiculus mus mauris vitae ultricies leo.
-
-Ullamcorper velit sed ullamcorper morbi tincidunt ornare massa. Fermentum et sollicitudin ac orci phasellus egestas. Nunc sed blandit libero volutpat sed cras ornare. Amet est placerat in egestas erat imperdiet sed euismod nisi. Neque convallis a cras semper auctor neque vitae. Id venenatis a condimentum vitae sapien. Risus feugiat in ante metus. Dignissim sodales ut eu sem integer vitae justo eget magna. In mollis nunc sed id semper risus. Nibh tortor id aliquet lectus proin. Dapibus ultrices in iaculis nunc sed augue lacus viverra. Malesuada bibendum arcu vitae elementum curabitur vitae nunc. Quisque id diam vel quam elementum pulvinar etiam non quam. Mi proin sed libero enim sed faucibus turpis in eu. Etiam tempor orci eu lobortis elementum. Amet nisl purus in mollis nunc sed id semper. Tristique et egestas quis ipsum suspendisse ultrices gravida dictum fusce.
+In middle school there was a weird phenomenon where the “cool” kids were all in band. Maybe it was just my sc, the place, or just the South taking marching band seriously, but it got me pumped to learn to play something.
