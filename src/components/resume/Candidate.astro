@@ -1,5 +1,6 @@
 ---
 import Social from '../../components/Social.astro';
+import { Icon } from 'astro-icon/components';
 
 interface Candidate {
   name: string;
@@ -19,7 +20,10 @@ const { candidate }: CandidateData = data;
   <h1 class="name">{candidate.name}</h1>
   <Social />
   <p class="about">{candidate.about}</p>
-  <p class="location">located in {candidate.location}</p>
+  <p class="location">
+    <Icon name="map-pin" />
+    {candidate.location}
+  </p>
 </section>
 
 <style>
@@ -28,7 +32,6 @@ const { candidate }: CandidateData = data;
     border-inline-start: solid var(--accent);
     border-top-right-radius: 2em;
     border-bottom-right-radius: 2em;
-    /* margin-inline: auto; */
     margin-block: 2em;
     padding: 2em;
     background: var(--black);
@@ -42,7 +45,13 @@ const { candidate }: CandidateData = data;
     color: var(--accent);
   }
   .location {
-    font-style: italic;
+    font-size: smaller;
+    padding: 0;
     text-align: end;
+  }
+  [data-icon='map-pin'] {
+    display: inline;
+    width: 1rem;
+    height: 1rem;
   }
 </style>

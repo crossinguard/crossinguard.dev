@@ -18,3 +18,26 @@ h4::before {
 section {
   padding-block: 3em;
 }
+
+:is(.experience-list, .responsibilities, .education-list, .certification-list) {
+  border-radius: 0 1rem;
+  padding: 0 0 0.5em 0.5em;
+}
+
+.experience-list {
+  border-inline-start: solid var(--gray-2);
+  border-block-end: solid var(--gray-2);
+}
+.responsibilities {
+  border-inline-start: solid var(--gray-7);
+  border-block-end: solid var(--gray-7);
+  padding-inline-start: 2em;
+}
+.education-list {
+  border-inline-start: solid var(--gray-1);
+  border-block-end: solid var(--gray-1);
+}
+.certification-list {
+  border-inline-start: solid var(--gray-1);
+  border-block-end: solid var(--gray-1);
+}
