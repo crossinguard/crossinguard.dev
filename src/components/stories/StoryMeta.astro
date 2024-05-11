@@ -1,0 +1,31 @@
+---
+import Era from './Era.astro';
+import Tags from './Tags.astro';
+
+interface Props {
+  era: string;
+  tags: string[];
+}
+
+const { era, tags } = Astro.props;
+---
+
+<div class="meta">
+  <Era era={era} />
+  <Tags tags={tags} />
+</div>
+
+<style>
+  /* .meta {
+    outline: solid red;
+    display: flex;
+    gap: 2em;
+  } */
+
+  .meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    color: var(--gray);
+  }
+</style>

@@ -23,6 +23,8 @@ My store was the smallest one in the city/county/region/state/world?, and looked
 
 I got to do the opening Sunday shift on my own. In Utah, that meant I got to sit at a store that was open, alone, and just work on what needed worked on without having to deal with anybody. Occasionally a regular would stop by. The church-goers who were pretending not to be at Blockbuster on a Sunday didn’t come until the afternoon shift. Sunday morning open was the best shift.
 
+![ticket stub](../../assets/ticket.svg)
+
 ## But oh, those Blockbuster nights
 
 I was a shift lead for a while, running money to the bank on my Schwinn, handling custies^[customers, but cool], and simply enjoying my time there. The store manager liked me, I did good work, and the crew all got along. We had a vacancy for the assistant store manager (ASM) position, which I was feeling pretty good about. I can confidently say I was the best employee at the store. That isn’t as impressive when you know that there were only about 5 people to compete with. Tiny store, 20% chance I am the best, just believe me.
@@ -36,10 +38,7 @@ To summarize:
 - current store manager tells me to train for it
 - I start to train for it
 - new hire flies in from Seattle and is the new assistant store manager
-
-…
-
-…
+- …
 
 I did not get the job. Turns out there is a power higher than store manager, THE DISTRICT.
 

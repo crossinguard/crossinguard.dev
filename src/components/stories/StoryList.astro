@@ -1,7 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
-import Era from './Era.astro';
-import Tags from './Tags.astro';
+import StoryMeta from './StoryMeta.astro';
 
 const posts = (await getCollection('stories')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
@@ -16,10 +15,7 @@ const posts = (await getCollection('stories')).sort(
           <h2 class="title">{post.data.title}</h2>
           <div class="info">
             <p class="description">{post.data.description}</p>
-            <div class="meta">
-              <Era era={post.data.era} />
-              <Tags tags={post.data.tags} />
-            </div>
+            <StoryMeta era={post.data.era} tags={post.data.tags} />
           </div>
         </a>
       </div>
@@ -59,13 +55,9 @@ const posts = (await getCollection('stories')).sort(
   }
   .description {
     color: var(--light);
+    border-block-end: dotted var(--dark);
+    margin-block-end: 1rem;
   }
   .meta {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-    color: var(--gray);
-    border-block-start: dotted var(--dark);
-    padding-block-start: 1rem;
   }
 </style>

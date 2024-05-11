@@ -1,7 +1,6 @@
 ---
 import FormattedDate from '../FormattedDate.astro';
-import Era from './Era.astro';
-import Tags from './Tags.astro';
+import StoryMeta from './StoryMeta.astro';
 
 interface Props {
   title: string;
@@ -19,8 +18,7 @@ const { title, pubDate, description, era, tags } = Astro.props;
   <p class="date">published <FormattedDate date={pubDate} /></p>
   <p class="description">{description}</p>
   <div class="meta">
-    <Era era={era} />
-    <Tags tags={tags} />
+    <StoryMeta era={era} tags={tags} />
   </div>
 </div>
 
