@@ -32,14 +32,6 @@ const { experience }: ExperienceData = data;
   <fieldset class="persona-selector">
     <legend>select professional persona:</legend>
     <div class="persona">
-      <input
-        id="general"
-        type="checkbox"
-        name="persona"
-        value="general"
-        checked
-      />
-      <label for="general">general experience</label><br />
       <input id="math" type="checkbox" name="persona" value="math" />
       <label for="math">mathematics educator</label><br />
       <input
@@ -134,27 +126,22 @@ const { experience }: ExperienceData = data;
   .role {
     padding-block: 0.5em;
   }
-  .responsibilities li:is(.general, .math, .assessment, .web) {
-    content-visibility: hidden;
-  }
-  :has(.persona [value='general']:checked) {
-    .responsibilities li:is(.general) {
-      content-visibility: visible;
-    }
+  .responsibilities li:is(.math, .assessment, .web) {
+    display: none;
   }
   :has(.persona [value='math']:checked) {
     .responsibilities li:is(.math) {
-      content-visibility: visible;
+      display: list-item;
     }
   }
   :has(.persona [value='assessment']:checked) {
     .responsibilities li:is(.assessment) {
-      content-visibility: visible;
+      display: list-item;
     }
   }
   :has(.persona [value='web']:checked) {
     .responsibilities li:is(.web) {
-      content-visibility: visible;
+      display: list-item;
     }
   }
 </style>

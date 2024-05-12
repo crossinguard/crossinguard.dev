@@ -20,9 +20,12 @@
                 "Coded, deployed, and managed static websites based on client design files, utilizing the Astro framework for responsive & accessible information",
                 "Provided subject matter expertise as a Python coding and assessment specialist for university course design, directly authoring interactive coding labs, traditional multiple choice items, and targeted formative items in alignment with high level design specifications"
               ],
-              "math": ["math placeholder"],
-              "assessment": ["assessment placeholder"],
-              "web": ["web placeholder"]
+              "math": ["math placeholder1", "math placeholder2"],
+              "assessment": [
+                "assessment placeholder1",
+                "assessment placeholder2"
+              ],
+              "web": ["web placeholder1", "web placeholder2"]
             }
           ]
         }
