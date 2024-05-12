@@ -1,9 +1,16 @@
 ---
+interface Responsibilities {
+  general: string[];
+  math: string[];
+  assessment: string[];
+  web: string[];
+}
+
 interface Role {
   title: string;
   department: string;
   date_range: string;
-  responsibilities: string[];
+  responsibilities: Responsibilities[];
 }
 
 interface Company {
@@ -22,6 +29,30 @@ const { experience }: ExperienceData = data;
 ---
 
 <section class="experience">
+  <fieldset class="persona-selector">
+    <legend>select professional persona:</legend>
+    <div class="persona">
+      <input
+        id="general"
+        type="checkbox"
+        name="persona"
+        value="general"
+        checked
+      />
+      <label for="general">general experience</label><br />
+      <input id="math" type="checkbox" name="persona" value="math" />
+      <label for="math">mathematics educator</label><br />
+      <input
+        id="assessment"
+        type="checkbox"
+        name="persona"
+        value="assessment"
+      />
+      <label for="assessment">assessment specialist</label><br />
+      <input id="web" type="checkbox" name="persona" value="web" />
+      <label for="web">web developer</label>
+    </div>
+  </fieldset>
   <h2>Experience</h2>
   <div class="experience-list">
     {
@@ -45,9 +76,26 @@ const { experience }: ExperienceData = data;
                   </div>
                 </div>
                 <ul class="responsibilities">
-                  {role.responsibilities.map((responsibility) => (
-                    <li>{responsibility}</li>
-                  ))}
+                  {role.responsibilities.map((responsibility) =>
+                    responsibility.math.map((item) => (
+                      <li class="math">{item}</li>
+                    ))
+                  )}
+                  {role.responsibilities.map((responsibility) =>
+                    responsibility.assessment.map((item) => (
+                      <li class="assessment">{item}</li>
+                    ))
+                  )}
+                  {role.responsibilities.map((responsibility) =>
+                    responsibility.web.map((item) => (
+                      <li class="web">{item}</li>
+                    ))
+                  )}
+                  {role.responsibilities.map((responsibility) =>
+                    responsibility.general.map((item) => (
+                      <li class="general">{item}</li>
+                    ))
+                  )}
                 </ul>
               </div>
             ))}
@@ -59,12 +107,11 @@ const { experience }: ExperienceData = data;
 </section>
 
 <style>
-  .experience-entry {
-    padding-block: 0.5em;
+  .persona-selector {
+    border-radius: 0 1rem 1rem;
   }
-  .role {
-    width: 95%;
-    margin-inline-start: auto;
+  .experience-entry {
+    padding: 0.5em;
   }
   :is(.company, .role-header) {
     display: flex;
@@ -82,6 +129,32 @@ const { experience }: ExperienceData = data;
 
     p {
       padding: 0;
+    }
+  }
+  .role {
+    padding-block: 0.5em;
+  }
+  .responsibilities li:is(.general, .math, .assessment, .web) {
+    content-visibility: hidden;
+  }
+  :has(.persona [value='general']:checked) {
+    .responsibilities li:is(.general) {
+      content-visibility: visible;
+    }
+  }
+  :has(.persona [value='math']:checked) {
+    .responsibilities li:is(.math) {
+      content-visibility: visible;
+    }
+  }
+  :has(.persona [value='assessment']:checked) {
+    .responsibilities li:is(.assessment) {
+      content-visibility: visible;
+    }
+  }
+  :has(.persona [value='web']:checked) {
+    .responsibilities li:is(.web) {
+      content-visibility: visible;
     }
   }
 </style>

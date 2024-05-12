@@ -15,8 +15,15 @@
           "department": "Freelance",
           "date_range": "Jul 2023 - current",
           "responsibilities": [
-            "Coded, deployed, and managed static websites based on client design files, utilizing the Astro framework for responsive & accessible information",
-            "Provided subject matter expertise as a Python coding and assessment specialist for university course design, directly authoring interactive coding labs, traditional multiple choice items, and targeted formative items in alignment with high level design specifications"
+            {
+              "general": [
+                "Coded, deployed, and managed static websites based on client design files, utilizing the Astro framework for responsive & accessible information",
+                "Provided subject matter expertise as a Python coding and assessment specialist for university course design, directly authoring interactive coding labs, traditional multiple choice items, and targeted formative items in alignment with high level design specifications"
+              ],
+              "math": ["math placeholder"],
+              "assessment": ["assessment placeholder"],
+              "web": ["web placeholder"]
+            }
           ]
         }
       ]
@@ -31,9 +38,16 @@
           "department": "Service Design and Innovation",
           "date_range": "Jan 2023 - Jul 2023",
           "responsibilities": [
-            "Increased reporting accuracy and efficiency by developing Power Automate and SharePoint workflows to automatically ingest and assign data request tickets, provide status updates, and manage digital files",
-            "Removed reporting pain points by pulling and preparing data from data silos (i.e., “personal databases” of csv, Excel files beyond the umbrella of IR), utilizing R & Python scripts to automate data cleaning and BI report generation",
-            "Developed custom business intelligence dashboards (Tableau, ThoughtSpot) using Databricks SQL queries against millions of student records to reevaluate essential metrics for initiatives and partnerships breaking traditional data pathways"
+            {
+              "general": [
+                "Increased reporting accuracy and efficiency by developing Power Automate and SharePoint workflows to automatically ingest and assign data request tickets, provide status updates, and manage digital files",
+                "Removed reporting pain points by pulling and preparing data from data silos (i.e., “personal databases” of csv, Excel files beyond the umbrella of IR), utilizing R & Python scripts to automate data cleaning and BI report generation",
+                "Developed custom business intelligence dashboards (Tableau, ThoughtSpot) using Databricks SQL queries against millions of student records to reevaluate essential metrics for initiatives and partnerships breaking traditional data pathways"
+              ],
+              "math": ["math placeholder"],
+              "assessment": ["assessment placeholder"],
+              "web": ["web placeholder"]
+            }
           ]
         },
         {
@@ -41,9 +55,16 @@
           "department": "Program Development, College of IT",
           "date_range": "Aug 2021 - Jan 2023",
           "responsibilities": [
-            "Designed and developed interactive coding assessments covering SQL, Python, and Java, ensuring surgical precision in measurement of defined key coding skills",
-            "Facilitated development workshops of internal stakeholders and external industry subject matter experts to design assessment-driven curriculum in alignment to high level content specifications and style guidelines",
-            "Collaborated with psychometrician to analyze assessment results, including fairness metrics for data-driven adjustments for assessment early care"
+            {
+              "general": [
+                "Designed and developed interactive coding assessments covering SQL, Python, and Java, ensuring surgical precision in measurement of defined key coding skills",
+                "Facilitated development workshops of internal stakeholders and external industry subject matter experts to design assessment-driven curriculum in alignment to high level content specifications and style guidelines",
+                "Collaborated with psychometrician to analyze assessment results, including fairness metrics for data-driven adjustments for assessment early care"
+              ],
+              "math": ["math placeholder"],
+              "assessment": ["assessment placeholder"],
+              "web": ["web placeholder"]
+            }
           ]
         },
         {
@@ -51,8 +72,15 @@
           "department": "Middle and High School Mathematics Education",
           "date_range": "Aug 2020 - Aug 2021",
           "responsibilities": [
-            "Measured learner competency in capstone projects for middle and high school mathematics teacher candidates, ensuring evidence of conceptual understanding, procedural fluency, and mathematical reasoning was present in lesson plans and recorded artifacts from the classroom",
-            "Increased reporting accuracy and decreased turnaround with customization of existing Excel analysis process, employing custom formulas to automate data ingestion and analysis of student performance"
+            {
+              "general": [
+                "Measured learner competency in capstone projects for middle and high school mathematics teacher candidates, ensuring evidence of conceptual understanding, procedural fluency, and mathematical reasoning was present in lesson plans and recorded artifacts from the classroom",
+                "Increased reporting accuracy and decreased turnaround with customization of existing Excel analysis process, employing custom formulas to automate data ingestion and analysis of student performance"
+              ],
+              "math": ["math placeholder"],
+              "assessment": ["assessment placeholder"],
+              "web": ["web placeholder"]
+            }
           ]
         }
       ]
@@ -67,9 +95,16 @@
           "department": "Skyridge High School",
           "date_range": "Aug 2016 - May 2020",
           "responsibilities": [
-            "Managed math department of 16 educators, including hiring, scheduling, peer evaluations, training, and mentoring of new instructors",
-            "Increase vertical alignment for student mathematical journey using by creating fixed primary content teams with common secondary courses allowing more effective & consistent collaboration",
-            "Coached the schools' first esports team in their inaugural season of Rocket League"
+            {
+              "general": [
+                "Managed math department of 16 educators, including hiring, scheduling, peer evaluations, training, and mentoring of new instructors",
+                "Increase vertical alignment for student mathematical journey using by creating fixed primary content teams with common secondary courses allowing more effective & consistent collaboration",
+                "Coached the schools' first esports team in their inaugural season of Rocket League"
+              ],
+              "math": ["math placeholder"],
+              "assessment": ["assessment placeholder"],
+              "web": ["web placeholder"]
+            }
           ]
         },
         {
@@ -77,9 +112,16 @@
           "department": "Lehi High School",
           "date_range": "Aug 2012 - May 2016",
           "responsibilities": [
-            "Utilized LMS tools and defined content competencies to generate & analyze data to drive curriculum and assessment iterations",
-            "Designed courses in alignment with the Common Core, including course scope & sequence, original lesson plans & presentations, instructional video recordings, custom assessments, and application-based projects",
-            "Provided direct instruction in an adaptive learning environment to thousands of students in both in-person and remote classrooms, specializing in building relationships with students that have historically struggled in mathematics"
+            {
+              "general": [
+                "Utilized LMS tools and defined content competencies to generate & analyze data to drive curriculum and assessment iterations",
+                "Designed courses in alignment with the Common Core, including course scope & sequence, original lesson plans & presentations, instructional video recordings, custom assessments, and application-based projects",
+                "Provided direct instruction in an adaptive learning environment to thousands of students in both in-person and remote classrooms, specializing in building relationships with students that have historically struggled in mathematics"
+              ],
+              "math": ["math placeholder"],
+              "assessment": ["assessment placeholder"],
+              "web": ["web placeholder"]
+            }
           ]
         }
       ]

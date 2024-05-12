@@ -1,18 +1,23 @@
+.resume {
+  --resume-accent: var(--accent);
+  --section-accent: var(--gray-6);
+  --subsection-accent: var(--gray-7);
+}
 h2::before {
   content: '< ';
-  color: var(--accent);
+  color: var(--resume-accent);
 }
 h2::after {
   content: ' >';
-  color: var(--accent);
+  color: var(--resume-accent);
 }
 h3::before {
   content: '# ';
-  color: var(--accent);
+  color: var(--resume-accent);
 }
 h4::before {
   content: '+ ';
-  color: var(--accent);
+  color: var(--resume-accent);
 }
 
 section {
@@ -25,19 +30,19 @@ section {
 }
 
 .experience-list {
-  border-inline-start: solid var(--gray-2);
-  border-block-end: solid var(--gray-2);
+  border-inline-start: solid var(--section-accent);
+  border-block-end: solid var(--section-accent);
 }
 .responsibilities {
-  border-inline-start: solid var(--gray-7);
-  border-block-end: solid var(--gray-7);
+  border-inline-start: solid var(--subsection-accent);
+  border-block-end: solid var(--subsection-accent);
   padding-inline-start: 2em;
 }
 .education-list {
-  border-inline-start: solid var(--gray-1);
-  border-block-end: solid var(--gray-1);
+  border-inline-start: solid var(--section-accent);
+  border-block-end: solid var(--section-accent);
 }
 .certification-list {
-  border-inline-start: solid var(--gray-1);
-  border-block-end: solid var(--gray-1);
+  border-inline-start: solid var(--section-accent);
+  border-block-end: solid var(--section-accent);
 }

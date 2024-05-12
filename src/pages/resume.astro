@@ -4,14 +4,16 @@ import Candidate from '../components/resume/Candidate.astro';
 import Experience from '../components/resume/Experience.astro';
 import Education from '../components/resume/Education.astro';
 import Certification from '../components/resume/Certification.astro';
+import Construction from '../components/Construction.astro';
 import '../styles/resume.css';
 
 const title = 'Resume';
 ---
 
 <BaseLayout title={title}>
-  <div class="content">
+  <div id="resume" class="content resume">
     <Candidate />
+    <Construction />
     <Experience />
     <Education />
     <Certification />
