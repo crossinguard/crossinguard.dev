@@ -28,21 +28,37 @@ import data from '../../data/resume.json';
 const { experience }: ExperienceData = data;
 ---
 
-<section class="experience">
+<section class="experience" id="experience">
   <fieldset class="persona-selector">
-    <legend>select professional persona:</legend>
+    <legend>professional persona:</legend>
     <div class="persona">
-      <input id="math" type="checkbox" name="persona" value="math" />
-      <label for="math">mathematics educator</label><br />
+      <input
+        id="math"
+        type="checkbox"
+        name="persona"
+        value="math"
+        aria-checked="true"
+        checked
+      />
+      <label for="math" class="label">mathematics educator</label><br />
       <input
         id="assessment"
         type="checkbox"
         name="persona"
         value="assessment"
+        aria-checked="true"
+        checked
       />
-      <label for="assessment">assessment specialist</label><br />
-      <input id="web" type="checkbox" name="persona" value="web" />
-      <label for="web">web developer</label>
+      <label for="assessment" class="label">assessment specialist</label><br />
+      <input
+        id="web"
+        type="checkbox"
+        name="persona"
+        value="web"
+        aria-checked="true"
+        checked
+      />
+      <label for="web" class="label">web developer</label>
     </div>
   </fieldset>
   <h2>Experience</h2>
@@ -101,6 +117,16 @@ const { experience }: ExperienceData = data;
 <style>
   .persona-selector {
     border-radius: 0 1rem 1rem;
+    margin-block: 1em;
+    accent-color: var(--accent);
+  }
+  input[type='checkbox'],
+  .label {
+    color: var(--gray);
+    cursor: pointer;
+  }
+  input[type='checkbox']:checked + .label {
+    color: var(--accent);
   }
   .experience-entry {
     padding: 0.5em;

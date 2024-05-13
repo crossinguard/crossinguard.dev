@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ResumeNav from '../components/resume/ResumeNav.astro';
 import Candidate from '../components/resume/Candidate.astro';
 import Experience from '../components/resume/Experience.astro';
 import Education from '../components/resume/Education.astro';
@@ -11,9 +12,10 @@ const title = 'Resume';
 ---
 
 <BaseLayout title={title}>
+  <ResumeNav />
   <div id="resume" class="content resume">
-    <Candidate />
     <Construction />
+    <Candidate />
     <Experience />
     <Education />
     <Certification />

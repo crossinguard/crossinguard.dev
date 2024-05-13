@@ -2,47 +2,50 @@
   --resume-accent: var(--accent);
   --section-accent: var(--gray-6);
   --subsection-accent: var(--gray-7);
-}
-h2::before {
-  content: '< ';
-  color: var(--resume-accent);
-}
-h2::after {
-  content: ' >';
-  color: var(--resume-accent);
-}
-h3::before {
-  content: '# ';
-  color: var(--resume-accent);
-}
-h4::before {
-  content: '+ ';
-  color: var(--resume-accent);
-}
 
+  h2::before {
+    content: '< ';
+    color: var(--resume-accent);
+  }
+  h2::after {
+    content: ' >';
+    color: var(--resume-accent);
+  }
+  h3::before {
+    content: '# ';
+    color: var(--resume-accent);
+  }
+  h4::before {
+    content: '+ ';
+    color: var(--resume-accent);
+  }
+  :is(
+      .experience-list,
+      .responsibilities,
+      .education-list,
+      .certification-list
+    ) {
+    border-radius: 0 1rem;
+    padding: 0 0 0.5em 0.5em;
+  }
+  .experience-list {
+    border-inline-start: solid var(--section-accent);
+    border-block-end: solid var(--section-accent);
+  }
+  .responsibilities {
+    border-inline-start: solid var(--subsection-accent);
+    border-block-end: solid var(--subsection-accent);
+    padding-inline-start: 2em;
+  }
+  .education-list {
+    border-inline-start: solid var(--section-accent);
+    border-block-end: solid var(--section-accent);
+  }
+  .certification-list {
+    border-inline-start: solid var(--section-accent);
+    border-block-end: solid var(--section-accent);
+  }
+}
 section {
   padding-block: 3em;
-}
-
-:is(.experience-list, .responsibilities, .education-list, .certification-list) {
-  border-radius: 0 1rem;
-  padding: 0 0 0.5em 0.5em;
-}
-
-.experience-list {
-  border-inline-start: solid var(--section-accent);
-  border-block-end: solid var(--section-accent);
-}
-.responsibilities {
-  border-inline-start: solid var(--subsection-accent);
-  border-block-end: solid var(--subsection-accent);
-  padding-inline-start: 2em;
-}
-.education-list {
-  border-inline-start: solid var(--section-accent);
-  border-block-end: solid var(--section-accent);
-}
-.certification-list {
-  border-inline-start: solid var(--section-accent);
-  border-block-end: solid var(--section-accent);
 }
