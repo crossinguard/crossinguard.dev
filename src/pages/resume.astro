@@ -12,14 +12,12 @@ const title = 'Resume';
 ---
 
 <BaseLayout title={title}>
-  <div class="columns">
-    <ResumeNav />
-    <div id="resume" class="content resume">
-      <!-- <Construction /> -->
-      <Candidate />
-      <Experience />
-      <Education />
-      <Certification />
-    </div>
+  <ResumeNav />
+  <div id="resume" class="content resume">
+    <Construction />
+    <Candidate />
+    <Experience />
+    <Education />
+    <Certification />
   </div>
 </BaseLayout>
