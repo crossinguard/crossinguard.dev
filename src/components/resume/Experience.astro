@@ -1,4 +1,6 @@
 ---
+import { Icon } from 'astro-icon/components';
+import Top from '../Top.astro';
 interface Responsibilities {
   general: string[];
   math: string[];
@@ -29,38 +31,7 @@ const { experience }: ExperienceData = data;
 ---
 
 <section class="experience" id="experience">
-  <fieldset class="persona-selector">
-    <legend>professional persona:</legend>
-    <div class="persona">
-      <input
-        id="math"
-        type="checkbox"
-        name="persona"
-        value="math"
-        aria-checked="true"
-        checked
-      />
-      <label for="math" class="label">mathematics educator</label><br />
-      <input
-        id="assessment"
-        type="checkbox"
-        name="persona"
-        value="assessment"
-        aria-checked="true"
-        checked
-      />
-      <label for="assessment" class="label">assessment specialist</label><br />
-      <input
-        id="web"
-        type="checkbox"
-        name="persona"
-        value="web"
-        aria-checked="true"
-        checked
-      />
-      <label for="web" class="label">web developer</label>
-    </div>
-  </fieldset>
+  <!-- <Persona /> -->
   <h2>Experience</h2>
   <div class="experience-list">
     {
@@ -86,17 +57,26 @@ const { experience }: ExperienceData = data;
                 <ul class="responsibilities">
                   {role.responsibilities.map((responsibility) =>
                     responsibility.math.map((item) => (
-                      <li class="math">{item}</li>
+                      <li class="math">
+                        <Icon name="math-operations" class="icon" />
+                        {item}
+                      </li>
                     ))
                   )}
                   {role.responsibilities.map((responsibility) =>
                     responsibility.assessment.map((item) => (
-                      <li class="assessment">{item}</li>
+                      <li class="assessment">
+                        <Icon name="exam" class="icon" />
+                        {item}
+                      </li>
                     ))
                   )}
                   {role.responsibilities.map((responsibility) =>
                     responsibility.web.map((item) => (
-                      <li class="web">{item}</li>
+                      <li class="web">
+                        <Icon name="code" class="icon" />
+                        {item}
+                      </li>
                     ))
                   )}
                   {role.responsibilities.map((responsibility) =>
@@ -112,22 +92,10 @@ const { experience }: ExperienceData = data;
       ))
     }
   </div>
+  <Top />
 </section>
 
 <style>
-  .persona-selector {
-    border-radius: 0 1rem 1rem;
-    margin-block: 1em;
-    accent-color: var(--accent);
-  }
-  input[type='checkbox'],
-  .label {
-    color: var(--gray);
-    cursor: pointer;
-  }
-  input[type='checkbox']:checked + .label {
-    color: var(--accent);
-  }
   .experience-entry {
     padding: 0.5em;
   }
@@ -151,23 +119,5 @@ const { experience }: ExperienceData = data;
   }
   .role {
     padding-block: 0.5em;
-  }
-  .responsibilities li:is(.math, .assessment, .web) {
-    display: none;
-  }
-  :has(.persona [value='math']:checked) {
-    .responsibilities li:is(.math) {
-      display: list-item;
-    }
-  }
-  :has(.persona [value='assessment']:checked) {
-    .responsibilities li:is(.assessment) {
-      display: list-item;
-    }
-  }
-  :has(.persona [value='web']:checked) {
-    .responsibilities li:is(.web) {
-      display: list-item;
-    }
   }
 </style>

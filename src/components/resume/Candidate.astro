@@ -1,5 +1,6 @@
 ---
 import Social from '../../components/Social.astro';
+import Persona from './Persona.astro';
 import { Icon } from 'astro-icon/components';
 
 interface Candidate {
@@ -24,6 +25,7 @@ const { candidate }: CandidateData = data;
     <Icon name="map-pin" />
     {candidate.location}
   </p>
+  <Persona />
 </section>
 
 <style>

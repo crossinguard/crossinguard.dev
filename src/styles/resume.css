@@ -50,3 +50,9 @@ section {
   padding-block: 3em;
   scroll-margin-block-start: 1em;
 }
+.icon {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  color: var(--accent);
+}

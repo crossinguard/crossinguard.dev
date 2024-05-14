@@ -1,4 +1,5 @@
 ---
+import Top from '../Top.astro';
 interface Cert {
   cert_name: string;
   emphasis: string;
@@ -28,6 +29,7 @@ const { certification }: CertificationData = data;
       ))
     }
   </div>
+  <Top />
 </section>
 
 <style>

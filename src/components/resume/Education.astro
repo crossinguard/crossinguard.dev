@@ -1,4 +1,5 @@
 ---
+import Top from '../Top.astro';
 interface Degree {
   degree: string;
   major: string;
@@ -30,6 +31,7 @@ const { education }: EducationData = data;
       ))
     }
   </div>
+  <Top />
 </section>
 
 <style>

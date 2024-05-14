@@ -2,12 +2,12 @@
 
 ---
 
-<div class="page-nav">
+<div class="page-nav shadow">
   <ul class="nav-items">
-    <li class="nav-item"><a href="#candidate">candidate</a></li>
-    <li class="nav-item"><a href="#experience">experience</a></li>
-    <li class="nav-item"><a href="#education">education</a></li>
-    <li class="nav-item"><a href="#certification">certification</a></li>
+    <li class="nav-item"><a href="#candidate">I. candidate</a></li>
+    <li class="nav-item"><a href="#experience">II. experience</a></li>
+    <li class="nav-item"><a href="#education">III. education</a></li>
+    <li class="nav-item"><a href="#certification">IV. certification</a></li>
   </ul>
 </div>
 
@@ -16,23 +16,24 @@
     position: -webkit-sticky;
     position: sticky;
     inset-block-start: 0.5em;
-    padding: 1em;
+    padding: 1em 0;
     z-index: 1;
     background-color: var(--black);
     opacity: 0.8;
   }
   .nav-items {
     display: flex;
-    /* flex-wrap: wrap; */
-    gap: 1em;
+    flex-wrap: wrap;
+    gap: 0.5em;
     justify-content: center;
     list-style: none;
-    padding: 0;
   }
   .nav-item a {
+    padding: 0.5em 0.25em;
     text-decoration: none;
+    border-radius: 0.5rem;
   }
   .nav-item a:hover {
-    text-decoration: revert;
+    background-color: var(--dark);
   }
 </style>
