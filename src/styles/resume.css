@@ -48,4 +48,5 @@
 }
 section {
   padding-block: 3em;
+  scroll-margin-block-start: 1em;
 }
