@@ -21,11 +21,11 @@ const { candidate }: CandidateData = data;
   <h1 class="name">{candidate.name}</h1>
   <Social />
   <p class="about">{candidate.about}</p>
+  <Persona />
   <p class="location">
     <Icon name="map-pin" />
     {candidate.location}
   </p>
-  <Persona />
 </section>
 
 <style>
@@ -46,6 +46,9 @@ const { candidate }: CandidateData = data;
   .about::after {
     content: ' ]';
     color: var(--accent);
+  }
+  .about {
+    padding: 0;
   }
   .location {
     font-size: smaller;

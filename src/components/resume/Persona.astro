@@ -3,88 +3,81 @@ import { Icon } from 'astro-icon/components';
 ---
 
 <fieldset class="persona-selector">
-  <legend>active resume personas </legend>
-  <div class="persona">
-    <div class="persona-math">
-      <input
-        id="math"
-        type="checkbox"
-        name="persona"
-        value="math"
-        aria-checked="true"
-        checked
-      />
-      <label for="math" class="label">mathematics educator</label>
+  <legend>active resume personas: </legend>
+  <div class="persona-list">
+    <div class="persona persona-math">
+      <div class="input-wrapper">
+        <input
+          id="math"
+          type="checkbox"
+          name="persona"
+          value="math"
+          aria-checked="true"
+          checked
+        />
+        <label for="math" class="label">mathematics educator </label>
+      </div>
       <Icon name="math-operations" class="icon icon-math" />
     </div>
-    <div class="persona-assessment">
-      <input
-        id="assessment"
-        type="checkbox"
-        name="persona"
-        value="assessment"
-        aria-checked="true"
-        checked
-      />
-      <label for="assessment" class="label">assessment specialist</label>
+    <div class="persona persona-assessment">
+      <div class="input-wrapper">
+        <input
+          id="assessment"
+          type="checkbox"
+          name="persona"
+          value="assessment"
+          aria-checked="true"
+          checked
+        />
+        <label for="assessment" class="label">assessment specialist </label>
+      </div>
       <Icon name="exam" class="icon icon-assessment" />
     </div>
-    <div class="persona-web">
-      <input
-        id="web"
-        type="checkbox"
-        name="persona"
-        value="web"
-        aria-checked="true"
-        checked
-      />
-      <label for="web" class="label">web developer </label>
+    <div class="persona persona-web">
+      <div class="input-wrapper">
+        <input
+          id="web"
+          type="checkbox"
+          name="persona"
+          value="web"
+          aria-checked="true"
+          checked
+        />
+        <label for="web" class="label">web developer </label>
+      </div>
       <Icon name="code" class="icon icon-web" />
     </div>
   </div>
 </fieldset>
 
-<style is:global>
+<style>
   .persona-selector {
     border-radius: 0 1rem 1rem;
     margin-block: 1em;
     accent-color: var(--accent-alt);
-    width: fit-content;
+    /* width: fit-content; */
     margin-inline: auto;
-    text-align: start;
   }
-  input[type='checkbox'],
-  .label {
+  .persona-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+  }
+  .input-wrapper {
     color: var(--gray);
+  }
+  .input-wrapper > * {
     cursor: pointer;
-    margin: 0.5em 0;
-    padding: 0.25em 0;
+  }
+  .label {
+    padding: 0.25em;
+  }
+  .icon {
+    color: var(--accent-alt);
+    margin-inline: auto;
   }
   input[type='checkbox']:checked + .label {
     color: var(--accent);
-  }
-  :has(.persona [value='math']:not(:checked)) {
-    .responsibilities li:is(.math) {
-      display: none;
-    }
-    .icon-math {
-      color: transparent;
-    }
-  }
-  :has(.persona [value='assessment']:not(:checked)) {
-    .responsibilities li:is(.assessment) {
-      display: none;
-    }
-    .icon-assessment {
-      color: transparent;
-    }
-  }
-  :has(.persona [value='web']:not(:checked)) {
-    .responsibilities li:is(.web) {
-      display: none;
-    }
-    .icon-web {
-      color: transparent;
-    }
   }
 </style>

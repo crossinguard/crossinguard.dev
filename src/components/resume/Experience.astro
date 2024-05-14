@@ -32,8 +32,8 @@ const { experience }: ExperienceData = data;
 
 <section class="experience" id="experience">
   <!-- <Persona /> -->
-  <h2>Experience</h2>
-  <div class="experience-list">
+  <h2>I. Experience</h2>
+  <div class="experience-list section-borders">
     {
       experience.map((company) => (
         <div class="experience-entry">
@@ -54,7 +54,7 @@ const { experience }: ExperienceData = data;
                     <p>{role.date_range}</p>
                   </div>
                 </div>
-                <ul class="responsibilities">
+                <ul class="responsibilities subsection-borders">
                   {role.responsibilities.map((responsibility) =>
                     responsibility.math.map((item) => (
                       <li class="math">

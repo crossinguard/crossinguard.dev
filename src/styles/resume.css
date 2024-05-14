@@ -1,58 +1,78 @@
 .resume {
-  --resume-accent: var(--accent);
-  --section-accent: var(--gray-6);
-  --subsection-accent: var(--gray-7);
-
+  /* RESUME HEADERS */
   h2::before {
     content: '< ';
-    color: var(--resume-accent);
+    color: var(--accent);
   }
   h2::after {
     content: ' >';
-    color: var(--resume-accent);
+    color: var(--accent);
   }
   h3::before {
     content: '# ';
-    color: var(--resume-accent);
+    color: var(--accent);
   }
   h4::before {
     content: '+ ';
-    color: var(--resume-accent);
+    color: var(--accent);
   }
-  :is(
-      .experience-list,
-      .responsibilities,
-      .education-list,
-      .certification-list
-    ) {
+
+  /* RESUME SECTION BORDERS */
+  .section-borders {
+    --section-accent: var(--gray-6);
     border-radius: 0 1rem;
     padding: 0 0 0.5em 0.5em;
-  }
-  .experience-list {
     border-inline-start: solid var(--section-accent);
     border-block-end: solid var(--section-accent);
   }
-  .responsibilities {
+  .subsection-borders {
+    --subsection-accent: var(--gray-7);
+    border-radius: 0 1rem;
+    padding: 0 0 0.5em 0.5em;
     border-inline-start: solid var(--subsection-accent);
     border-block-end: solid var(--subsection-accent);
     padding-inline-start: 2em;
   }
-  .education-list {
-    border-inline-start: solid var(--section-accent);
-    border-block-end: solid var(--section-accent);
+
+  /* RESUME GENERAL */
+  .icon {
+    display: inline-block;
   }
-  .certification-list {
-    border-inline-start: solid var(--section-accent);
-    border-block-end: solid var(--section-accent);
+  section {
+    padding-block: 3em;
+    scroll-margin-block-start: 3em;
   }
 }
-section {
-  padding-block: 3em;
-  scroll-margin-block-start: 1em;
-}
-.icon {
-  display: inline-block;
+
+/* PERSONA ACTIVE STYLES */
+.responsibilities .icon {
   width: 1rem;
   height: 1rem;
   color: var(--accent);
+}
+
+/* PERSONA INACTIVE STYLES */
+:has(.persona-list [value='math']:not(:checked)) {
+  .responsibilities li:is(.math) {
+    display: none;
+  }
+  .icon-math {
+    color: var(--dark);
+  }
+}
+:has(.persona-list [value='assessment']:not(:checked)) {
+  .responsibilities li:is(.assessment) {
+    display: none;
+  }
+  .icon-assessment {
+    color: var(--dark);
+  }
+}
+:has(.persona-list [value='web']:not(:checked)) {
+  .responsibilities li:is(.web) {
+    display: none;
+  }
+  .icon-web {
+    color: var(--dark);
+  }
 }
