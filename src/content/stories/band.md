@@ -11,8 +11,6 @@ tags:
     - 'sax'
 ---
 
-CURRENTLY BEING WRITTEN
-
 ## Purple + Gold
 
 In middle school the situation was topsy-turvy. The “cool” kids were all in band. One of the many things I learned living in Mississippi is that the South takes marching band seriously.
