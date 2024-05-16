@@ -40,3 +40,8 @@ a {
 a:hover {
   color: var(--accent);
 }
+
+/* STORY IMAGES */
+.story img {
+  margin-inline: auto;
+}
