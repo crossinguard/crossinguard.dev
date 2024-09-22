@@ -1,0 +1,50 @@
+---
+import FormattedDate from '../FormattedDate.astro';
+
+interface Props {
+  title: string;
+  pubDate: Date;
+  description: string;
+}
+
+const { title, pubDate, description } = Astro.props;
+---
+
+<div class="header shadow">
+  <h1 class="title">{title}</h1>
+  <p class="date">published <FormattedDate date={pubDate} /></p>
+  <p class="description">{description}</p>
+</div>
+
+<style>
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    background: var(--black);
+    padding: 2em;
+    margin-block: 2em;
+  }
+  .title {
+    text-align: center;
+    max-width: 25ch;
+    border-bottom: solid var(--accent-alt);
+    font-size: 2rem;
+    font-size: clamp(2rem, 1.5rem + 2vw, 2.5rem);
+  }
+  .date {
+    font-size: smaller;
+    color: var(--gray);
+    font-style: italic;
+  }
+  .description::before {
+    content: '[ ';
+    color: var(--accent);
+  }
+  .description::after {
+    content: ' ]';
+    color: var(--accent);
+  }
+</style>

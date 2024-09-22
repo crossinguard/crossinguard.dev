@@ -1,0 +1,29 @@
+---
+import { type CollectionEntry, getCollection } from 'astro:content';
+import PersonasLayout from '../../layouts/PersonasLayout.astro';
+
+interface Props {
+  entry: CollectionEntry<'personas'>;
+}
+
+export async function getStaticPaths() {
+  const posts = await getCollection('personas');
+  return posts.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<PersonasLayout
+  title={entry.data.title}
+  pubDate={entry.data.pubDate}
+  description={entry.data.description}
+>
+  <div class="story">
+    <Content />
+  </div>
+</PersonasLayout>

@@ -1,6 +1,6 @@
 # crossinguard.dev
 
-Files for the [beta.crossinguard.dev](https://beta.crossinguard.dev/) static website utilizing the [Astro](https://astro.build/) framework. My original website was build using [Quarto](https://quarto.org/) which this is intended to replace.
+Files for my personal website [crossinguard.dev](https://crossinguard.dev/), built utilizing the [Astro](https://astro.build/) web framework.
 
 ## Commands
 

@@ -1,0 +1,25 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import PersonaHeader from '../components/personas/PersonaHeader.astro';
+
+interface Props {
+  title: string;
+  pubDate: Date;
+  description: string;
+}
+
+const { title, pubDate, description } = Astro.props;
+---
+
+<BaseLayout title={title}>
+  <PersonaHeader
+    title={title}
+    pubDate={pubDate}
+    description={description}
+  />
+
+  <div class="content">
+    <slot />
+  </div>
+
+</BaseLayout>

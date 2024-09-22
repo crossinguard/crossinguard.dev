@@ -11,6 +11,16 @@ const storiesCollection = defineCollection({
   }),
 });
 
+const personasCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    pubDate: z.coerce.date(),
+    description: z.string(),
+  }),
+});
+
 export const collections = {
   stories: storiesCollection,
+  personas: personasCollection,
 };
