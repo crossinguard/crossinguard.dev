@@ -1,6 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import PersonaHeader from '../components/personas/PersonaHeader.astro';
+import PersonaFooter from '../components/personas/PersonaFooter.astro';
 
 interface Props {
   title: string;
@@ -24,4 +25,5 @@ const { title, pubDate, editDate, description } = Astro.props;
     <slot />
   </div>
 
+  <PersonaFooter />
 </BaseLayout>

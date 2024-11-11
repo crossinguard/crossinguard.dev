@@ -32,7 +32,8 @@ h5 {
 }
 
 a {
-  color: var(--accent-alt);
+  color: var(--light);
+  text-decoration-color: var(--accent-alt);
   transition: all 0.2s ease-in-out;
   text-underline-offset: 0.25em;
 }
