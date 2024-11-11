@@ -4,15 +4,19 @@ import FormattedDate from '../FormattedDate.astro';
 interface Props {
   title: string;
   pubDate: Date;
+  editDate: Date;
   description: string;
 }
 
-const { title, pubDate, description } = Astro.props;
+const { title, pubDate, editDate, description } = Astro.props;
 ---
 
 <div class="header shadow">
   <h1 class="title">{title}</h1>
-  <p class="date">published <FormattedDate date={pubDate} /></p>
+  <div class="metadata">
+    <p class="date">published <FormattedDate date={pubDate} /></p>
+    <p class="date">edited <FormattedDate date={editDate} /></p>
+  </div>
   <p class="description">{description}</p>
 </div>
 
@@ -33,6 +37,12 @@ const { title, pubDate, description } = Astro.props;
     border-bottom: solid var(--accent-alt);
     font-size: 2rem;
     font-size: clamp(2rem, 1.5rem + 2vw, 2.5rem);
+  }
+  .metadata {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 25ch;
   }
   .date {
     font-size: smaller;

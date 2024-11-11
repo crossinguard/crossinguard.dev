@@ -5,16 +5,18 @@ import PersonaHeader from '../components/personas/PersonaHeader.astro';
 interface Props {
   title: string;
   pubDate: Date;
+  editDate: Date;
   description: string;
 }
 
-const { title, pubDate, description } = Astro.props;
+const { title, pubDate, editDate, description } = Astro.props;
 ---
 
 <BaseLayout title={title}>
   <PersonaHeader
     title={title}
     pubDate={pubDate}
+    editDate={editDate}
     description={description}
   />
 

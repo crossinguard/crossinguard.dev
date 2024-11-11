@@ -1,6 +1,7 @@
 ---
 title: 'Assessment Specialist'
 pubDate: 2024-09-22
+editDate: 2024-09-22
 description: 'A summary of my professional experiences as an assessment specialist at the secondary and higher education level.'
 ---
 

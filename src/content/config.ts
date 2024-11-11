@@ -16,6 +16,7 @@ const personasCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     pubDate: z.coerce.date(),
+    editDate: z.coerce.date(),
     description: z.string(),
   }),
 });

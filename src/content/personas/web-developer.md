@@ -1,6 +1,7 @@
 ---
 title: 'Web Developer'
 pubDate: 2024-09-22
+editDate: 2024-09-22
 description: 'A summary of my experiences as a volunteer web developer for a local nonprofit.'
 ---
 
