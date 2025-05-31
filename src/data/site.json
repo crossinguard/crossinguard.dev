@@ -5,9 +5,18 @@
     "url": "https://crossinguard.dev/",
     "language": "en",
     "nav": [
-      { "url": "/", "name": "Home" },
-      { "url": "/stories", "name": "Stories" },
-      { "url": "/resume", "name": "Resume" }
+      {
+        "url": "/",
+        "name": "Home"
+      },
+      {
+        "url": "/stories",
+        "name": "Stories"
+      },
+      {
+        "url": "/resume",
+        "name": "Resume"
+      }
     ]
   },
   "author": {
